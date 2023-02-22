@@ -16,6 +16,7 @@
         <input type="password" name="password">
         <input type="submit" name="login" value="submit">
 	</form>
+  
   <?php 
 
   include("php-add-ons\conect.php");
@@ -29,8 +30,15 @@
       $password = $_POST["password"];
       
       // Query the database for the entered username and password
-      $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-      $result = mysqli_query($conn, $sql);
+      $sql = "SELECT * FROM users WHERE username='$username'";
+      $user = mysqli_query($conn, $sql);
+
+
+
+      if($user['$password']==$password){
+        
+
+      }
       
       if (mysqli_num_rows($result) == 1) {
           // If the query returns a single row, the login was successful
