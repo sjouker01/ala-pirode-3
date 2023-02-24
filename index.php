@@ -9,23 +9,29 @@
 </head>
 
 <body>
-<?php include("php-add-ons\header.php") ?>
-<h1>Inloggen</h1>
-	<form method="post" action="login.php">
-		<input type="text" name="username">
-        <input type="password" name="password">
-        <input type="submit" name="login" value="submit">
-	</form>
-  <?php 
 
-  include("php-add-ons\conect.php");
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-  $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-  $result = mysqli_query($conn, $sql);
+  <?php
+  
+  
   ?>
-    <?php
+<?php include("php-add-ons\header.php")
+ ?>
+ <a href="php-add-ons\inloggen.php">a</a>
+<h1>Inloggen</h1>
+	<form method="POST" action="">
+  <label>username:</label>
+  <input type="text" name="gebruikersnaam">
+  <br>
+  <label >password:</label>
+  <input type="text" name="wachtwoord" >
+  <br>
+  <input type="subit">
+
+	</form>
+  
+   
+
+  <?php
     // conection 
     include("php-add-ons\conect.php");
     // footer
