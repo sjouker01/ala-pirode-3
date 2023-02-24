@@ -9,13 +9,14 @@
 </head>
 
 <body>
-<a href="php-add-ons\inloggen.php">a</a>
+
   <?php
   
   
   ?>
 <?php include("php-add-ons\header.php")
  ?>
+ <a href="php-add-ons\inloggen.php">a</a>
 <h1>Inloggen</h1>
 	<form method="POST" action="">
   <label>username:</label>
