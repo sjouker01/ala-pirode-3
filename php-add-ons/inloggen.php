@@ -7,30 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
-include('../php-add-ons\conect.php');
-$query = "SELECT username, password FROM gebruikers";
-$result = $conn->query($query);
+<form action="" method="POST">
+    <label for="username">Username:</label> <br>
+    <input type="text" name="username-inlog" id=""> <br>
 
-// Controleren of er resultaten zijn en deze in variabelen opslaan
-$usernames = array();
-$passwords = array();
+    <label for="password">Password:</label> <br>
+    <input type="password" name="password-inlogen" id=""> <br>
 
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $usernames[] = $row["username"];
-        $passwords[] = $row["password"];
-    }
-} else {
-    echo "0 results";
-}
-
-// De resultaten weergeven
-echo "Gebruikersnamen: " . implode(", ", $usernames) . "<br>";
-echo "Wachtwoorden: " . implode(", ", $passwords);
-
-
-
-?>
+    <input type="submit" name="login" value="Login"> <br>
+</form>
 </body>
 </html>
+<?php 
+include('../php-add-ons\conect.php');
+
+
+
+
+if(isset($_POST['login'])) {
+    $username = $_POST['username-inlog'];
+    $password = $_POST['password-inlogen'];
+
+    $sql ="SELECT * FROM gebruikers WHERE username='$username' AND password='$password'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_row();
+
+    if($result->num_rows == 1){
+        echo "Welkom, " . $row[1] . "!";
+        // Voer hier verdere acties uit zoals het doorsturen naar een beveiligde pagina.
+    } else {
+        echo "Ongeldige gebruikersnaam en/of wachtwoord.";
+    }
+}
+
+?>
