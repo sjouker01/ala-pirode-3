@@ -92,6 +92,10 @@ nav ul li.dropdown ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+<<<<<<< Updated upstream
+=======
+/* einde header */
+>>>>>>> Stashed changes
 
 /* Media query voor schermen smaller dan 768 pixels */
 @media screen and (max-width: 768px) {
@@ -209,7 +213,7 @@ nav ul li.dropdown ul li a:hover {
   main {
     flex: 1;
   }
-  /* einden main */
+  /* einde main */
   /* begin footer */
   footer {
     background-color: #26508F;
@@ -274,7 +278,7 @@ nav ul li.dropdown ul li a:hover {
       justify-content: center;
     }
   }
-  /* einen footer  */
+  /* einde footer  */
   table {
     border-collapse: collapse;
     width: 60%;
@@ -309,3 +313,13 @@ nav ul li.dropdown ul li a:hover {
       font-size: 12px;
     }
   }
+
+
+  /* begin product pagina*/
+body{
+  height: 100%;
+  width: 100%;
+}
+
+
+  /* eind product pagina*/
