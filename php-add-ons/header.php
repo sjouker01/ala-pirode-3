@@ -22,19 +22,13 @@
           <li><a href="#">Item 1</a></li>
           <li><a href="#">Item 2</a></li>
           <li><a href="#">Item 3</a></li>
-          <li><a href="#" id="dropdown-inloggen">Inloggen</a></li>
+          <li><a href="php-add-ons\inloggen.php" id="dropdown-inloggen">Inloggen</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 </header>
-<form action="php-add-ons\inloggen.php" method="post" id="mijnForm">
-  <input type="hidden" name="naam" value="John">
-  <button type="submit" id="mijnKnop">Inloggen</button>
-</form>
-<section id="overlay">
-  <p>Even geduld a.u.b...</p>
-</section>
+
 <?php 
 
 
