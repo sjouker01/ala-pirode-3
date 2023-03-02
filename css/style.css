@@ -1,61 +1,211 @@
 
 /* begin header */
 
+/* Stijlen voor schermen breder dan 768 pixels */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #26508F;
-  color: #fff;
   padding: 20px;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 32px;
+  color: #fff;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  justify-content: flex-end;
 }
 
-nav li {
-  margin: 0 10px;
+nav ul li {
+  margin-left: 20px;
 }
 
-nav li a {
+nav ul li:last-child {
+  margin-left: 0;
+}
+
+nav ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-nav .dropdown ul {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: #26508F;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-nav .dropdown:hover ul {
+nav ul li.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li.dropdown:hover ul {
   display: block;
 }
 
-nav .dropdown li {
-  margin: 0;
+nav ul li.dropdown ul li {
+  margin: 5px 0;
 }
 
-nav .dropdown li a {
+nav ul li.dropdown ul li:last-child {
+  margin-bottom: 0;
+}
+
+nav ul li.dropdown ul li a {
+  color: #333;
+}
+
+nav ul li.dropdown ul li a:hover {
+  color: #26508F;
+}
+
+#dropdown-inloggen {
+  font-weight: bold;
+}
+
+#mijnForm {
+  margin-top: 10px;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#overlay p {
+  font-size: 24px;
   color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media query voor schermen smaller dan 768 pixels */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #26508F;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background-color: #fff;
+    color: #26508F;
+  }
+
+  nav ul li.dropdown ul {
+    position: static;
+    display: none;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  nav ul li.dropdown:hover ul {
+    display: block;
+  }
+
+  nav ul li.dropdown ul li {
+    margin: 0;
+  }
+
+  nav ul li.dropdown ul li:last-child {
+    margin-bottom: 5px;
+  }
+
+  nav ul li.dropdown ul li a {
+    color: #fff;
+  }
 }
 /* einden header */
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
+
   /* main  */
+  /* form inlog */
+
+
+/* Geef het formulier een witte achtergrond en een breedte van 400px */
+#login-form  {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Maak de labels vetgedrukt */
+#login-form  label {
+  font-weight: bold;
+}
+
+/* Geef de invoervelden een grijze achtergrond, witte tekst en afgeronde hoeken */
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Geef de submitknop een donkerblauwe achtergrond, witte tekst en afgeronde hoeken */
+#login-button {
+  background-color: #26508F;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Geef de submitknop een 3D-effect wanneer erop wordt gehoverd */
+#login-button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+
+
+  
+  /* eind form inlog */
   main {
     flex: 1;
   }
