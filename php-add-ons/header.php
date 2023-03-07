@@ -15,7 +15,9 @@
     <ul>
       <li><a href="#">Knop 1</a></li>
       <li><a href="#">Knop 2</a></li>
-      <li><a href="#">Knop 3</a></li>
+      <li>
+
+<a href="php-add-ons\inloggen.php">inlog</a></li>
       <li class="dropdown">
         <a href="#">Dropdown</a>
         <ul>
