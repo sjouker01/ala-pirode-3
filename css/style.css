@@ -2,38 +2,48 @@
 /* begin header */
 
 /* Stijlen voor schermen breder dan 768 pixels */
+/* stijl voor de header */
 header {
   background-color: #26508F;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* stijl voor het logo */
 .logo {
-  color: white;
-  font-size: 2em;
+  font-size: 24px;
   font-weight: bold;
+}
+
+/* stijl voor de navigatie */
+nav {
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
 nav li {
-  margin: 0 1em;
+  margin-right: 10px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight: bold;
+nav li:last-child {
+  margin-right: 0;
 }
 
+/* stijl voor de dropdown */
 .dropdown ul {
-  position: absolute;
   display: none;
-  background-color: #26508F;
+  position: absolute;
+  top: 30px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .dropdown:hover ul {
@@ -41,24 +51,16 @@ nav a {
 }
 
 .dropdown ul li {
-  margin: 0;
+  margin: 5px 0;
 }
 
-.dropdown ul a {
-  color: white;
-  font-weight: normal;
-}
-
+/* stijl voor de inlogknop */
 #dropdown-inloggen {
   font-weight: bold;
-}
-
-.dropdown ul li:hover {
-  background-color: #204573;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  color: #fff;
+  background-color: #3f11a8;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 
@@ -96,7 +98,7 @@ nav a:hover {
 
 /* Geef de submitknop een donkerblauwe achtergrond, witte tekst en afgeronde hoeken */
 #login-button {
-  background-color: #26508F;
+  background-color: #090a0a;
   color: #fff;
   border: none;
   padding: 10px 20px;
