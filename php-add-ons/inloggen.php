@@ -22,7 +22,13 @@ if(isset($_POST['login'])) {
     $row = $result->fetch_row();
     if($result->num_rows == 1){
         echo "Welkom, " . $row[1] . "!";
-        // Voer hier verdere acties uit zoals het doorsturen naar een beveiligde pagina.
+        session_start();
+        $_SESSION['loggedin'] = true;
+        session_start();
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true){
+    header('');
+    exit;
+}
     } else {
         echo "Ongeldige gebruikersnaam en/of wachtwoord.";
     }
