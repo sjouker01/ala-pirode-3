@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="js\coockies.js"></script>
+
 </head>
 
 <body>
+
 <?php include("php-add-ons\header.php");
  ?>
 
  <main class="home-pagina">
+ <div id="cookie-popup" >
+    <p>We use cookies to improve your browsing experience. By continuing to use this site, you consent to our use of cookies.</p>
+    <button id="accept-cookies">I accept</button>
+</div>
 
  </main>
-
-   
+ <?php 
+ include("php-add-ons\cookies.php");
+ ?>
 
   <?php
     // conection 
