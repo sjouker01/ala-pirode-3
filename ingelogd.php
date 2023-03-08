@@ -8,13 +8,6 @@
     
 </head>
 <body>
-    <?php 
-    if (isset($_SESSION['ingelogd_als'])) {
-
-    } else
     
-        ?>
-        <h1> voor de pagina moet je inloggen</h1>
-        <a href="#">log in</a>
 </body>
 </html>

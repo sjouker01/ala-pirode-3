@@ -26,7 +26,7 @@ if(isset($_POST['login'])) {
         $_SESSION['loggedin'] = true;
         session_start();
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true){
-    header('Location: login.php');
+    header('');
     exit;
 }
     } else {
