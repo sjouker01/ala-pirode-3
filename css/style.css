@@ -1,182 +1,225 @@
 
 /* begin header */
 
+/* Stijlen voor schermen breder dan 768 pixels */
+/* stijl voor de header */
 header {
+  background-color: #26508F;
+  color: #FFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #26508F;
-  color: #fff;
   padding: 20px;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 2em;
   font-weight: bold;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav li {
+nav ul li {
   margin: 0 10px;
+  position: relative;
 }
 
-nav li a {
-  color: #fff;
+nav ul li a {
+  color: #FFF;
   text-decoration: none;
 }
 
-nav .dropdown ul {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: #26508F;
-}
-
-nav .dropdown:hover ul {
+nav ul li:hover > ul {
   display: block;
 }
 
-nav .dropdown li {
+nav ul li ul {
+  background-color: #FFF;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+}
+
+nav ul li ul li {
   margin: 0;
 }
 
-nav .dropdown li a {
-  color: #fff;
+nav ul li ul li a {
+  color: #333;
 }
+
+#dropdown-inloggen {
+  color: #26508F;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+  }
+
+  .menu-toggle:hover {
+    background-color: #FFF;
+  }
+
+  .menu-toggle span {
+    background-color: #FFF;
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 20px;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .menu-toggle.active + nav ul {
+    display: block;
+  }
+}
+
+
+
 /* einden header */
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
+
   /* main  */
-  main {
-    flex: 1;
+  #coockie-popup{
+    display: none;
   }
-  /* einden main */
-  /* begin footer */
+  /* form inlog */
+
+
+/* Geef het formulier een witte achtergrond en een breedte van 400px */
+#login-form  {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Maak de labels vetgedrukt */
+#login-form  label {
+  font-weight: bold;
+}
+
+/* Geef de invoervelden een grijze achtergrond, witte tekst en afgeronde hoeken */
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Geef de submitknop een donkerblauwe achtergrond, witte tekst en afgeronde hoeken */
+#login-button {
+  background-color: #090a0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Geef de submitknop een 3D-effect wanneer erop wordt gehoverd */
+#login-button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+
+
+  
+  /* eind form inlog */
   footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #26508F;
-    padding: 20px;
-    font-size: 14px;
-    color: #fff;
-    margin-top: auto;
+    color: #FFFFFF;
   }
   
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+    color: #FFFFFF;
   }
   
   .footer-row {
     display: flex;
     justify-content: space-between;
+    color: #FFFFFF;
   }
   
   .footer-col {
-    flex-basis: 50%;
-    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #FFFFFF;
   }
   
   .footer-col-1 {
-    text-align: left;
+    max-width: 300px;
   }
   
   .footer-links {
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: flex-end;
+    color: #FFFFFF;
   }
   
   .footer-links li {
-    margin: 0 10px;
+    margin-left: 20px;
+    color: #FFFFFF;
   }
   
-  a {
-    color: #fff;
+  .footer-links li:first-child {
+    margin-left: 0;
+  }
+  .footer-col-footer-col-2{
+    color: #FFFFFF;
     text-decoration: none;
   }
-  
-  a:hover {
-    color: #222;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-row {
-      flex-direction: column;
-    }
-    .footer-col {
-      flex-basis: 100%;
-      text-align: center;
-    }
-    .footer-col-1 {
-      text-align: center;
-    }
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  /* einen footer  */
-  table {
-    border-collapse: collapse;
-    width: 60%;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 10%;
-  }
-  th, td {
-    text-align: left;
-    padding: 6px;
-    font-size: 14px;
-  }
-  th {
-    background-color: #333;
-    color: #fff;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-
-  /* Media query voor kleinere schermen */
-  @media only screen and (max-width: 600px) {
-    table {
-      width: 100%;
-    }
-    th, td {
-      text-align: center;
-      padding: 4px;
-      font-size: 12px;
-    }
-    th {
-      font-size: 12px;
-    }
-  }
-
-  /* begin producten pagina */
-  #producten_body{
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    margin: 0rem;
-    overflow: hidden;
-  }
-  #image-track >.image{
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: center;
-  }
-  #image-track{
-    display: flex;
-    gap: 4vmin;
-    position: absolute; left: 50%; top: 50%; transform: translate(0%, -50%);
-  }
-  /*einde producten pagina*/
