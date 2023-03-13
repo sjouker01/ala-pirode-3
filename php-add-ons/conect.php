@@ -1,9 +1,11 @@
 <?php 
+$servername ="localhost";
+$username ="root";
+$password ="";
+$dbname ="energy";
 try{
-    $conn = new mysqli("localhost", "root", "" , "energy");
+$conn = new mysqli(hostname: $servername, username: $username, password: $password, database: $dbname);
 }catch(Exception $e){
-    $error = $e->getMessage();
-    echo $error;
+    echo $e->getMessage();
 }
-
 ?>
