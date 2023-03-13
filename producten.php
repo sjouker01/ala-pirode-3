@@ -7,7 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body id='producten_body'>
+<?php
+// header
+include("php-add-ons\header.php");
+
+?>
+<body>
+    <!--afbeeldingen van slideshow-->
+<div id='producten_body'>
     <article id="image-track" data-mouse-down-at="0">
         <img class="image" src="images/Wortel.png" draggable="false"/>
         <img class="image" src="images/Wortel.png" draggable="false"/>
@@ -17,5 +24,12 @@
         <img class="image" src="images/Wortel.png" draggable="false"/>
         <img class="image" src="images/Wortel.png" draggable="false"/>
 </article>
+</div>
+
+<!-- <script src="js/producten.js"></script> -->
 </body>
+<?php
+// footer
+include 'php-add-ons\footer.php';
+?>
 </html>
