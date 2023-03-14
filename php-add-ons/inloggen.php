@@ -19,20 +19,25 @@ if(isset($_POST['login'])) {
 
     $sql ="SELECT * FROM gebruikers WHERE username='$username' AND password='$password'";
     $result = $conn->query($sql);
-    $row = $result->fetch_row();
+    $row = $result->fetch_object();
     if($result->num_rows == 1){
-        echo "Welkom, " . $row[1] . "!";
-       
-        $_SESSION['loggedin'] = true;
+        
+
+    
         session_start();
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true){
-    header('');
+        $_SESSION["username"] = $username;
+        $_SESSION["permission"] = $row->permission;
+        
+       
+       
+        
+     
     exit;
 }
     } else {
         echo "Ongeldige gebruikersnaam en/of wachtwoord.";
     }
-}
+
 
 ?>
 <?php

@@ -8,6 +8,14 @@
 </head>
 <body>
     <?php include("php-add-ons\header.php")?>
-    
+    <?php session_start(); 
+    if(isset($_SESSION["permission"])){
+        if($_SESSION["permission"] !=2 ){
+            header("Location:index.php");
+        }
+    }else{
+        header("Location:index.php");
+    }
+    ?>
 </body>
 </html>
