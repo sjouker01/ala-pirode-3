@@ -16,9 +16,9 @@ include("php-add-ons\header.php");
     <!--afbeeldingen van slideshow-->
 <div id='producten_body'>
     <article id="image-track" data-mouse-down-at="0">
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
+        <img class="image" src="images/image.melk.png" draggable="false"/>
+        <img class="image" src="images/melk.png" draggable="false"/>
+        <img class="image" src="images/advocado.png" draggable="false"/>
         <img class="image" src="images/Wortel.png" draggable="false"/>
         <img class="image" src="images/Wortel.png" draggable="false"/>
         <img class="image" src="images/Wortel.png" draggable="false"/>
