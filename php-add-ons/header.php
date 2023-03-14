@@ -21,7 +21,13 @@
           <li><a href="php-add-ons\inloggen.php" id="dropdown-inloggen">Inloggen</a></li>
         </ul>
       </li>
+      <?php session_start(); 
+    if(isset($_SESSION["username"])){
+       echo $_SESSION["username"];
+    }
+    ?>
     </ul>
+
   </nav>
 </header>
 

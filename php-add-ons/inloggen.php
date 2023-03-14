@@ -28,7 +28,7 @@ if(isset($_POST['login'])) {
         $_SESSION["username"] = $username;
         $_SESSION["permission"] = $row->permission;
         
-       
+       header("Location: ../index.php");
        
         
      
