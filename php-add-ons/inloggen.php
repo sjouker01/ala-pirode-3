@@ -36,29 +36,6 @@ if(isset($_POST['login'])) {
 
 ?>
 <?php
- // Start the session
-
-// Controleer of het inlogformulier is ingediend en sla de gebruikersnaam op in een cookie als de gebruiker is ingelogd
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username-inlog'];
-    // controleer hier of de gebruiker is geauthenticeerd en valideer de gebruikersnaam indien nodig
-    if ($username) {
-        setcookie('username', $username, time() + 10, '/');
-    }
-}
-
-// Controleer of de cookie is ingesteld en toon een welkomstboodschap
-if (isset($_COOKIE['username-inlog'])) {
-    $username = $_COOKIE['username-inlog'];
-    echo "Welkom terug, $username!";
-    echo "<br>";
-
-    // Voeg hieronder de pop-up code toe
-
-    echo "U bent nu ingelogd.";
-}
-
-// Include het inlogformulier
 
 ?>
 
