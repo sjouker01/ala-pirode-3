@@ -117,7 +117,6 @@ nav ul li ul li a {
 
 /* einden header */
 
-
   /* main  */
   #cookie-popup {
     display: none;
@@ -132,7 +131,7 @@ nav ul li ul li a {
     background-color: red;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
+ 
 #cookie-popup p {
     margin: 0;
 }
@@ -255,3 +254,89 @@ nav ul li ul li a {
     color: #FFFFFF;
     text-decoration: none;
   }
+ 
+  form {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Stijlen voor formuliergroepen */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Stijlen voor labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Stijlen voor invoervelden */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+  
+  /* Stijlen voor toevoegenknop */
+  .btn-toevoegen {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Stijlen voor toevoegenknop bij hover */
+  .btn-toevoegen:hover {
+    background-color: #3e8e41;
+  }
+  article {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}

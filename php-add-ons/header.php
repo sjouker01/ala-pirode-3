@@ -23,7 +23,7 @@
       </li>
       <?php session_start(); 
     if(isset($_SESSION["username"])){
-       echo $_SESSION["username"];
+      ?><a  href="/ala-pirode-3/admincheck.php"> <?php echo $_SESSION["username"];?></a><?php
     }
     ?>
     </ul>
