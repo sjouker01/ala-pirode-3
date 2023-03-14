@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <?php
 $servername ="localhost";
 $username ="root";
@@ -11,54 +17,36 @@ $conn = new mysqli(hostname: $servername, username: $username, password: $passwo
 
 // echo "Ongeldige gebruikersnaam en/of wachtwoord.";
 
+
+// check if the login form was submitted
 if(isset($_POST['login'])) {
+    // get the username and password from the form
     $username = $_POST['username-inlog'];
     $password = $_POST['password-inlogen'];
 
-    
-
-    $sql ="SELECT * FROM gebruikers WHERE username='$username' AND password='$password'";
+    // query the database for a user with matching username and password
+    $sql = "SELECT * FROM gebruikers WHERE username='$username' AND password='$password'";
     $result = $conn->query($sql);
-    $row = $result->fetch_row();
-    if($result->num_rows == 1){
-        echo "Welkom, " . $row[1] . "!";
-       
-        $_SESSION['loggedin'] = true;
+
+    // check if a matching user was found
+    if($result->num_rows == 1) {
+        // start the session and set the session variables
         session_start();
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true){
-    header('');
-    exit;
-}
+        $_SESSION["username"] = $username;
+        $_SESSION["permission"] = $result->fetch_object()->permission;
+
+        // redirect to the index page
+        header("Location: ../index.php");
+        exit;
     } else {
+        // display an error message if no matching user was found
         echo "Ongeldige gebruikersnaam en/of wachtwoord.";
     }
 }
+    
 
 ?>
 <?php
- // Start the session
-
-// Controleer of het inlogformulier is ingediend en sla de gebruikersnaam op in een cookie als de gebruiker is ingelogd
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username-inlog'];
-    // controleer hier of de gebruiker is geauthenticeerd en valideer de gebruikersnaam indien nodig
-    if ($username) {
-        setcookie('username', $username, time() + 10, '/');
-    }
-}
-
-// Controleer of de cookie is ingesteld en toon een welkomstboodschap
-if (isset($_COOKIE['username-inlog'])) {
-    $username = $_COOKIE['username-inlog'];
-    echo "Welkom terug, $username!";
-    echo "<br>";
-
-    // Voeg hieronder de pop-up code toe
-
-    echo "U bent nu ingelogd.";
-}
-
-// Include het inlogformulier
 
 ?>
 
@@ -70,18 +58,31 @@ if (isset($_COOKIE['username-inlog'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+    <?php include("header.php");?>
     
-<form action="" method="POST">
-    <label for="username">Username:</label> <br>
-    <input type="text" name="username-inlog" id=""> <br>
+<article>
+    <section>
+        <h2>Login</h2>
+        <form action="" method="POST">
+            <section>
+                <label for="username">Username:</label>
+                <input type="text" name="username-inlog" id="username" required>
+            </section>
 
-    <label for="password">Password:</label> <br>
-    <input type="password" name="password-inlogen" id=""> <br>
+            <section>
+                <label for="password">Password:</label>
+                <input type="password" name="password-inlogen" id="password" required>
+            </section>
 
-    <input type="submit" name="login" value="Login"> <br>
-    
-</form>
+            <section>
+                <button type="submit" name="login">Login</button>
+            </section>
+        </form>
+    </section>
+</article>
+
 </body>
 </html>
