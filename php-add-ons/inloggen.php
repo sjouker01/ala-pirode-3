@@ -2,6 +2,42 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <?php include("header.php");?>
+    
+<article>
+    <section>
+        <h2>Login</h2>
+        <form action="" method="POST">
+            <section>
+                <label for="username">Username:</label>
+                <input type="text" name="username-inlog" id="username" required>
+            </section>
+
+            <section>
+                <label for="password">Password:</label>
+                <input type="password" name="password-inlogen" id="password" required>
+            </section>
+
+            <section>
+                <button type="submit" name="login">Login</button>
+            </section>
+        </form>
+    </section>
+</article>
+
+</body>
+</html>
+
 
 
 <?php
@@ -50,39 +86,3 @@ if(isset($_POST['login'])) {
 
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-<body>
-    <?php include("header.php");?>
-    
-<article>
-    <section>
-        <h2>Login</h2>
-        <form action="" method="POST">
-            <section>
-                <label for="username">Username:</label>
-                <input type="text" name="username-inlog" id="username" required>
-            </section>
-
-            <section>
-                <label for="password">Password:</label>
-                <input type="password" name="password-inlogen" id="password" required>
-            </section>
-
-            <section>
-                <button type="submit" name="login">Login</button>
-            </section>
-        </form>
-    </section>
-</article>
-
-</body>
-</html>
