@@ -1,13 +1,10 @@
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script src="/js/login.js"></script>
-
 <body>
 <header>
   <div class="logo">Logo</div>
   <nav>
     <ul>
-      <li><a href="#">Knop 1</a></li>
+      <li><a href="producten.php">producten</a></li>
       <li><a href="#">Knop 2</a></li>
       <li>
 
