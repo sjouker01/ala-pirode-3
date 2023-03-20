@@ -1,4 +1,8 @@
 
+/*font van website */
+*{
+  font-family: 'Roboto', sans-serif;
+}
 /* begin header */
 
 /* Stijlen voor schermen breder dan 768 pixels */
@@ -9,6 +13,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background-color: #304ffe ;
+  color: #fff;
+
   padding: 20px;
 }
 
@@ -42,9 +50,14 @@ nav ul li ul {
   background-color: #FFF;
   display: none;
   position: absolute;
+
+  z-index: 1;
+  background-color: #304ffe;
+
   top: 100%;
   left: 0;
   width: 200px;
+
 }
 
 nav ul li ul li {
@@ -60,9 +73,18 @@ nav ul li ul li a {
   font-weight: bold;
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    
+
 @media only screen and (max-width: 600px) {
   nav ul {
     display: none;
+
   }
 
   nav ul li {
@@ -198,12 +220,20 @@ nav ul li ul li a {
   
   /* eind form inlog */
   footer {
+
+    background-color: #304ffe;
+    padding: 20px;
+    font-size: 14px;
+    color: #fff;
+    margin-top: auto;
+
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #26508F;
     color: #FFFFFF;
+
   }
   
   .footer-container {
@@ -398,6 +428,145 @@ button:hover {
     }
   }
 
+
+/* contact formulier css */
+
+
+.container-contact {
+  display:inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  
+}
+
+.content-contact {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  margin-top:-10vh;
+ 
+}
+
+.form-container-contact {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* CSS van de input (Invul plekken) zones van het contact formulier */
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=email], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+} 
+
+/* Responsive CSS van de contact formulier en de tekst ernaast */
+
+
+@media only screen and (max-width: 650px){
+  .container-contact{
+    display:block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tekst */
+
+  .content-contact {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    margin-top:5vh;
+  }
+  
+  .form-container-contact {
+    flex: 1;
+    padding: 20px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type=text], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  } 
+}
+
   /* begin producten pagina */
   #producten_body{
     height: 100vh;
@@ -422,4 +591,5 @@ button:hover {
     display: none;
   }
   /*einde producten pagina*/
+
 
