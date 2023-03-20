@@ -17,12 +17,11 @@ include("php-add-ons\header.php");
 <div id='producten_body'>
     <article id="image-track" data-mouse-down-at="0">
         <img class="image" src="images/image.melk.png" draggable="false"/>
-        <img class="image" src="images/melk.png" draggable="false"/>
         <img class="image" src="images/advocado.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
+        <img class="image" src="images/sinas.png" draggable="false"/>
+        <img class="image" src="images/wortel.png" draggable="false"/>
+        
+        
 </article>
 </div>
 
@@ -30,6 +29,6 @@ include("php-add-ons\header.php");
 </body>
 <?php
 // footer
-include 'php-add-ons\footer.php';
+include("php-add-ons\hooter.php");
 ?>
 </html>
