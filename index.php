@@ -23,13 +23,18 @@
 
  </main>
  <?php 
- include("php-add-ons\cookies.php");
+ require_once("php-add-ons\cookies.php");
  ?>
+<?php
+require_once("php-add-ons\aandbedining.php");
 
+
+
+?>
   <?php
     // conection 
   
-    include("php-add-ons\hooter.php");
+    require_once("php-add-ons\hooter.php");
     ?>
 </body>
 </html>
