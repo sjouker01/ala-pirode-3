@@ -38,7 +38,7 @@ include ("php-add-ons\header.php");
 </body>
 <footer>
     <?php
-    include ('php-add-ons\footer.php')
+    include ('php-add-ons\hooter.php')
     ?>
   </footer>
 </body>
