@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
 <?php 
 include("php-add-ons\conect.php");
 
@@ -13,8 +16,12 @@ if ($result1->num_rows > 0) {
         $omschrijving = $row->omschrijving;
         $afbeelding = $row->afbeelding;
         
-        // ...
-        // do something with the retrieved data
+        echo '<div class="aanbieding">';
+        echo '<div class="titel">' . $titel1 . '</div>';
+        echo '<div class="datum">Van ' . $begindatum1 . ' tot ' . $einddatum . '</div>';
+        echo '<div class="omschrijving">' . $omschrijving . '</div>';
+        echo '<img class="afbeelding" src="' . $afbeelding . '">';
+        echo '</div>';
     }
 } else {
     echo "0 results";

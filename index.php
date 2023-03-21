@@ -25,7 +25,12 @@
  <?php 
  require_once("php-add-ons\cookies.php");
  ?>
+<?php
+require_once("php-add-ons\aandbedining.php");
 
+
+
+?>
   <?php
     // conection 
   
