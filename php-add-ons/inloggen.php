@@ -55,25 +55,59 @@ $conn = new mysqli(hostname: $servername, username: $username, password: $passwo
 
 
 // check if the login form was submitted
+// if(isset($_POST['login'])) {
+//     // get the username and password from the form
+//     $username = $_POST['username-inlog'];
+//     $password = $_POST['password-inlogen'];
+
+//     // query the database for a user with matching username and password
+//     $sql = "SELECT * FROM gebruikers WHERE username='$username' AND password='$password'";
+//     $result = $conn->query($sql);
+
+//     // check if a matching user was found
+//     if($result->num_rows == 1) {
+//         // start the session and set the session variables
+//         session_start();
+//         $_SESSION["username"] = $username;
+//         $_SESSION["permission"] = $result->fetch_object()->permission;
+
+//         // redirect to the index page
+//         header("Location: ../index.php");
+//         exit;
+//     } else {
+//         // display an error message if no matching user was found
+//         echo "Ongeldige gebruikersnaam en/of wachtwoord.";
+//     }
+
+// }
 if(isset($_POST['login'])) {
     // get the username and password from the form
     $username = $_POST['username-inlog'];
     $password = $_POST['password-inlogen'];
 
-    // query the database for a user with matching username and password
-    $sql = "SELECT * FROM gebruikers WHERE username='$username' AND password='$password'";
-    $result = $conn->query($sql);
+    // prepare the SQL statement to find a user with a matching username
+    $stmt = $conn->prepare("SELECT * FROM gebruikers WHERE username=?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     // check if a matching user was found
     if($result->num_rows == 1) {
-        // start the session and set the session variables
-        session_start();
-        $_SESSION["username"] = $username;
-        $_SESSION["permission"] = $result->fetch_object()->permission;
+        // verify the password
+        $hashed_password = $result->fetch_object()->password;
+        if (password_verify($password, $hashed_password)) {
+            // start the session and set the session variables
+            session_start();
+            $_SESSION["username"] = $username;
+            $_SESSION["permission"] = $result->fetch_object()->permission;
 
-        // redirect to the index page
-        header("Location: ../index.php");
-        exit;
+            // redirect to the index page
+            header("Location: ../index.php");
+            exit;
+        } else {
+            // display an error message if the password is incorrect
+            echo "Ongeldige gebruikersnaam en/of wachtwoord.";
+        }
     } else {
         // display an error message if no matching user was found
         echo "Ongeldige gebruikersnaam en/of wachtwoord.";
