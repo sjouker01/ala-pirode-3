@@ -4,11 +4,11 @@
   <div class="logo">Logo</div>
   <nav>
     <ul>
-      <li><a href="../index.php">home</a></li>
-      <li><a href="contact-action.php">contact</a></li>
+      <li><a href="index.php">home</a></li>
+      <li><a href="contact-pagina.php">contact</a></li>
       <li>
 
-<a href="../producten.php">producten</a></li>
+<a href="producten.php">producten</a></li>
       <li class="dropdown">
         <a href="#">Dropdown</a>
       

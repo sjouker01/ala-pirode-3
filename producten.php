@@ -9,7 +9,7 @@
 </head>
 <?php
 // header
-include("php-add-ons\header.php");
+require_once("php-add-ons\header.php");
 
 ?>
 <body>
@@ -30,6 +30,6 @@ include("php-add-ons\header.php");
 </body>
 <?php
 // footer
-include 'php-add-ons\footer.php';
+require_once('php-add-ons\footer.php');
 ?>
 </html>

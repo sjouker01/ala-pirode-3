@@ -1,5 +1,5 @@
 <?php
-include ("php-add-ons\conect.php");
+require_once("php-add-ons\conect.php");
 
 $name=$_POST['name'];
 $email=$_POST['email'];
