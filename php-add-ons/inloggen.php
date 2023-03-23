@@ -85,9 +85,11 @@ if(isset($_POST['login'])) {
     $username = $_POST['username-inlog'];
     $password = $_POST['password-inlogen'];
 
-    // query the database for a user with matching username
-    $sql = "SELECT * FROM gebruikers WHERE username='$username'";
-    $result = $conn->query($sql);
+    // prepare the SQL statement to find a user with a matching username
+    $stmt = $conn->prepare("SELECT * FROM gebruikers WHERE username=?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     // check if a matching user was found
     if($result->num_rows == 1) {
