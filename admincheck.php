@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <?php include("php-add-ons\header.php");
+    <?php require_once("php-add-ons\header.php");
       
      
-    include("php-add-ons\conect.php");
+      require_once('php-add-ons\conect.php');
 
 // Gebruiker toevoegen
-
+try{
 if (isset($_POST['add'])) {
   $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam']);
   $wachtwoord1 = $_POST['wachtwoord'];
@@ -22,6 +22,31 @@ if (isset($_POST['add'])) {
 
   mysqli_query($conn, " INSERT INTO gebruikers (username, password, permission) VALUES ('$gebruikersnaam1', '$wachtwoord1', '$toestemming1')");
 }
+if ($conn->connect_error) {
+  die("Connectie mislukt: " . $conn->connect_error);
+} 
+} catch(mysqli_sql_exception $e) {
+  if ($e->getCode() == 1062) {
+  
+}
+}
+
+
+if (isset($_POST['ver'])) {
+  $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam1']);
+  $wachtwoord1 = mysqli_real_escape_string($conn, $_POST['wachtwoord1']);
+
+  mysqli_query($conn, "DELETE FROM gebruikers WHERE username = '$gebruikersnaam1' AND password = '$wachtwoord1'");
+
+  if (mysqli_affected_rows($conn) > 0) {
+    echo "succses  " . mysqli_affected_rows($conn);
+  } else {
+    echo "Fout bij het verwijderen van de gebruiker: " . mysqli_error($conn);
+  }
+}
+
+
+
 
 // Gebruikers weergeven
 
@@ -48,6 +73,23 @@ if (isset($_POST['add'])) {
     <button class="btn-toevoegen" type="submit" name="add">Toevoegen</button>
   </div>
 </form>
+<form method="POST" action="" >
+<article class="form-group">
+  <label for="gebruikersnaam1">gebruikersnaam:</label>
+  <input type="text"  name="gebruikersnaam1">
+</article>
+<article class="from-group">
+  <label for="wachtwoord1">wachtwoord:</label>
+  <input type="password" name="wachtwoord1">
+</article>
+<article class="form-group">
+  <button class="btn-toevoegen1" type="submit" name="ver">verwijderd</button>
+</article>
+
+
+
+
+</form>
 
 
 <?php
@@ -69,6 +111,7 @@ if(!isset($_SESSION)) {
  
     
     ?>
+    
    
 </body>
 </html>
