@@ -14,21 +14,39 @@
       require_once('php-add-ons\conect.php');
 
 // Gebruiker toevoegen
-try{
-if (isset($_POST['add'])) {
-  $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam']);
-  $wachtwoord1 = $_POST['wachtwoord'];
-  $toestemming1 = $_POST['toestemming'];
+// try{
+// if (isset($_POST['add'])) {
+//   $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam']);
+//   $wachtwoord1 = $_POST['wachtwoord'];
+//   $toestemming1 = $_POST['toestemming'];
 
-  mysqli_query($conn, " INSERT INTO gebruikers (username, password, permission) VALUES ('$gebruikersnaam1', '$wachtwoord1', '$toestemming1')");
-}
-if ($conn->connect_error) {
-  die("Connectie mislukt: " . $conn->connect_error);
-} 
+//   mysqli_query($conn, " INSERT INTO gebruikers (username, password, permission) VALUES ('$gebruikersnaam1', '$wachtwoord1', '$toestemming1')");
+// }
+// if ($conn->connect_error) {
+//   die("Connectie mislukt: " . $conn->connect_error);
+// } 
+// } catch(mysqli_sql_exception $e) {
+//   if ($e->getCode() == 1062) {
+  
+// }
+// }
+try {
+  if (isset($_POST['add'])) {
+    $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam']);
+    $wachtwoord1 = $_POST['wachtwoord'];
+    $toestemming1 = $_POST['toestemming'];
+    
+    $hashed_password = password_hash($wachtwoord1, PASSWORD_DEFAULT); // Hash the password
+
+    mysqli_query($conn, "INSERT INTO gebruikers (username, password, permission) VALUES ('$gebruikersnaam1', '$hashed_password', '$toestemming1')");
+  }
+  if ($conn->connect_error) {
+    die("Connectie mislukt: " . $conn->connect_error);
+  } 
 } catch(mysqli_sql_exception $e) {
   if ($e->getCode() == 1062) {
-  
-}
+    // Handle duplicate entry error
+  }
 }
 
 
