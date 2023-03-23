@@ -38,7 +38,9 @@ require_once ("php-add-ons\header.php");
 </body>
 <footer>
     <?php
+
    require_once('php-add-ons\hooter.php')
+
     ?>
   </footer>
 </body>
