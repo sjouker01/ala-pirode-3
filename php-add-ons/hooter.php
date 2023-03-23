@@ -16,9 +16,9 @@
         </article>
         <article class="footer-col-footer-col-2">
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.php">Home</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href=".//contact-pagina.php">Contact</a></li>
           </ul>
         </article>
       </article>
