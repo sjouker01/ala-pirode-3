@@ -16,13 +16,12 @@ require_once("php-add-ons\header.php");
     <!--afbeeldingen van slideshow-->
 <div id='producten_body'>
     <article id="image-track" data-mouse-down-at="0">
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
-        <img class="image" src="images/Wortel.png" draggable="false"/>
+        <img class="image" src="images/image.melk.png" draggable="false"/>
+        <img class="image" src="images/advocado.png" draggable="false"/>
+        <img class="image" src="images/sinas.png" draggable="false"/>
+        <img class="image" src="images/wortel.png" draggable="false"/>
+        
+        
 </article>
 </div>
 
@@ -30,6 +29,8 @@ require_once("php-add-ons\header.php");
 </body>
 <?php
 // footer
-require_once('php-add-ons\footer.php');
+
+require_once('php-add-ons\hooter.php');
+
 ?>
-</html>
+</html> 
