@@ -64,23 +64,31 @@ try {
 // }
 
 if (isset($_POST['ver'])) {
-  $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam1']);
-  $wachtwoord1 = mysqli_real_escape_string($conn, $_POST['wachtwoord1']);
+  $gebruikersnaam1 = $_POST['gebruikersnaam1'];
+  $wachtwoord1 = $_POST['wachtwoord1'];
 
-  // hash the password before comparing it with the database
-  $hashed_password = password_hash($wachtwoord1, PASSWORD_BCRYPT, [12]);
+  $sql = "SELECT * FROM gebruikers WHERE username = '$gebruikersnaam1'";
+  $result = $conn->query($sql);
 
-  $query = "DELETE FROM gebruikers WHERE username = '$gebruikersnaam1' AND password = '$wachtwoord1'";
-  $result = mysqli_query($conn, $query);
+  if($result->num_rows == 1){
+    $row = $result->fetch_assoc();
+    $hashed_password = $row['password'];
 
-  if (!$result) {
-    echo "Fout bij het verwijderen van de gebruiker: " . mysqli_error($conn);
-  } else if (mysqli_affected_rows($conn) > 0) {
-    echo "Succesvol verwijderd: " . mysqli_affected_rows($conn);
-  } else {
-    echo "Geen record gevonden om te verwijderen.";
+    // Verify the password
+    if (password_verify($wachtwoord1, $hashed_password)) {
+      $user_id = $row['username'];
+      $sql = "DELETE FROM gebruikers WHERE username = '$user_id'";
+      $conn->query($sql);
+      // User has been deleted
+    }
   }
 }
+
+
+
+  // hash the password before comparing it with the database
+
+
 
 
 
