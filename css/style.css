@@ -1,4 +1,8 @@
 
+/*font van website */
+*{
+  font-family: 'Roboto', sans-serif;
+}
 /* begin header */
 
 /* Stijlen voor schermen breder dan 768 pixels */
@@ -9,6 +13,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background-color: #304ffe ;
+  color: #fff;
+
   padding: 20px;
 }
 
@@ -22,6 +30,8 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  color: #FFF;
+  text-decoration: none;
 }
 
 nav ul li {
@@ -29,7 +39,7 @@ nav ul li {
   position: relative;
 }
 
-nav ul li a {
+nav ul li a, nav ul a {
   color: #FFF;
   text-decoration: none;
 }
@@ -42,9 +52,14 @@ nav ul li ul {
   background-color: #FFF;
   display: none;
   position: absolute;
+
+  z-index: 1;
+  background-color: #304ffe;
+
   top: 100%;
   left: 0;
   width: 200px;
+
 }
 
 nav ul li ul li {
@@ -60,9 +75,17 @@ nav ul li ul li a {
   font-weight: bold;
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
 @media only screen and (max-width: 600px) {
   nav ul {
     display: none;
+
   }
 
   nav ul li {
@@ -114,14 +137,40 @@ nav ul li ul li a {
 }
 
 
-
 /* einden header */
 
-
   /* main  */
-  #coockie-popup{
+  #cookie-popup {
     display: none;
-  }
+    position: fixed;
+    bottom: calc(100vh - 50%);
+    left: calc(100vw - 50% - 100px);
+    right: 0;
+    z-index: 10;
+    padding: 20px;
+    width: 200px;
+    /* background-color: #f1f1f1; */
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ 
+#cookie-popup p {
+    margin: 0;
+}
+
+#cookie-popup button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cookie-popup button:hover {
+    background-color: #3e8e41;
+}
+
   /* form inlog */
 
 
@@ -171,12 +220,20 @@ nav ul li ul li a {
   
   /* eind form inlog */
   footer {
-    position: fixed;
+
+    background-color: #304ffe;
+    padding: 20px;
+    font-size: 14px;
+    color: #fff;
+    margin-top: auto;
+
+    position:relative;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #26508F;
     color: #FFFFFF;
+
   }
   
   .footer-container {
@@ -223,6 +280,98 @@ nav ul li ul li a {
     color: #FFFFFF;
     text-decoration: none;
   }
+
+  .footer-links a{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+ 
+  form {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Stijlen voor formuliergroepen */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Stijlen voor labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Stijlen voor invoervelden */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+  
+  /* Stijlen voor toevoegenknop */
+  .btn-toevoegen {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Stijlen voor toevoegenknop bij hover */
+  .btn-toevoegen:hover {
+    background-color: #3e8e41;
+  }
+  article {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
   
   a:hover {
     color: #222;
@@ -279,6 +428,145 @@ nav ul li ul li a {
     }
   }
 
+
+/* contact formulier css */
+
+
+.container-contact {
+  display:inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  
+}
+
+.content-contact {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  margin-top:-10vh;
+ 
+}
+
+.form-container-contact {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* CSS van de input (Invul plekken) zones van het contact formulier */
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=email], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+} 
+
+/* Responsive CSS van de contact formulier en de tekst ernaast */
+
+
+@media only screen and (max-width: 650px){
+  .container-contact{
+    display:block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tekst */
+
+  .content-contact {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    margin-top:5vh;
+  }
+  
+  .form-container-contact {
+    flex: 1;
+    padding: 20px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type=text], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  } 
+}
+
   /* begin producten pagina */
   #producten_body{
     height: 100vh;
@@ -303,3 +591,38 @@ nav ul li ul li a {
     display: none;
   }
   /*einde producten pagina*/
+
+
+
+
+  .aanbieding {
+    
+    margin-top: 10vh;
+    margin-left: 10vw ;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 30vw;
+    margin-bottom: 4vh;
+    
+    
+  }
+  .titel {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .datum {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  .omschrijving {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .afbeelding {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
