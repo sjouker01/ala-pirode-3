@@ -94,8 +94,8 @@ if(isset($_POST['login'])) {
     // check if a matching user was found
     if($result->num_rows == 1) {
         // verify the password
-        $hashed_password = $result->fetch_object()->password;
-        if (password_verify($password, $hashed_password)) {
+       $dbpassword = $result->fetch_object()->password;
+        if (password_verify($password, $dbpassword)) {
             // start the session and set the session variables
             session_start();
             $_SESSION["username"] = $username;

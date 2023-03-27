@@ -68,7 +68,7 @@ if (isset($_POST['ver'])) {
   $wachtwoord1 = mysqli_real_escape_string($conn, $_POST['wachtwoord1']);
 
   // hash the password before comparing it with the database
-  $hashed_password = password_hash($wachtwoord1, PASSWORD_DEFAULT);
+  $hashed_password = password_hash($wachtwoord1, PASSWORD_BCRYPT, [12]);
 
   $query = "DELETE FROM gebruikers WHERE username = '$gebruikersnaam1' AND password = '$wachtwoord1'";
   $result = mysqli_query($conn, $query);
@@ -136,7 +136,7 @@ if(!isset($_SESSION)) {
     session_start();
     
 } else {
-    if( !isset($_SESSION["permission"])){
+    if( isset($_SESSION["permission"])){
         if($_SESSION["permission"] !=2 ){
             header("Location:index.php");
       

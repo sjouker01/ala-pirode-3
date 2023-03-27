@@ -303,3 +303,18 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+CREATE TABLE `smaken` (
+  `id` int(11) NOT NULL,
+  `naam` varchar(100) NOT NULL,
+  `beschrijving` text NOT NULL,
+  `aanbieding` int(11) NOT NULL,
+  `ingredienten` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `smaken`
+--
+
+INSERT INTO `smaken` (`id`, `naam`, `beschrijving`, `aanbieding`, `ingredienten`) VALUES
+(1, 'wortel', 'een lekker fris drankje, met  de verfrissende smaak van wortel. met lekker veel cafeine voor die extra boost. de oranje coke in vocht vorm.', 0, 'Voedingswaarden\r\n\r\nDeze waarden gelden voor het onbereide product.\r\n\r\nSoort    Per 1000 Milliliter    RI*\r\nEnergie    195 kJ (46 kcal)\r\nWortel   22g\r\nVet    0 g\r\nwaarvan verzadigd    0 g\r\nKoolhydraten    11 g\r\nwaarvan suikers    11 g\r\nEiwitten    0 g\r\nZout    0.1 g\r\nVitamine B3 / Niacine    6.4 mg    40%\r\nVitamine B5 / Pantotheenzuur    2 mg    33%\r\nVitamine B2 / Riboflavine    0.21 mg    15%\r\nVitamine B6 / Pyridoxine    0.2 mg    14%\r\nVitamine B12 / Cyano-Cobalamine    0.4 µg    16%'),
+(2, 'melk', 'melk is lekker, maar wat is nog lekkerder? melk met cafeine en kilo\'s suiker en zoetstoffen. koop nu dit witte goedje \r\nmaar stop het niet in je neus!', 0, 'Voedingswaarden\r\n\r\nDeze waarden gelden voor het onbereide product.\r\n\r\nSoort    Per 1000 Milliliter    RI*\r\nEnergie    195 kJ (46 kcal)\r\nmelk 22L\r\nVet    0 g\r\nwaarvan verzadigd    0 g\r\nKoolhydraten    11 g\r\nwaarvan suikers    100 g\r\nEiwitten    1000 g\r\nZout    0.1 g\r\nVitamine B3 / Niacine    6.4 mg    40%\r\nVitamine B5 / Pantotheenzuur    2 mg    33%\r\nVitamine B2 / Riboflavine    0.21 mg    15%\r\nVitamine B6 / Pyridoxine    0.2 mg    14%\r\nVitamine B12 / Cyano-Cobalamine    0.4 µg    16%'); 
