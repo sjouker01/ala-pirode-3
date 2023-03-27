@@ -7,3 +7,4 @@ window.addEventListener("scroll", (e) => {
 
     track.style.transform = `translate(${percentage}%, -50%)`;
 });
+
