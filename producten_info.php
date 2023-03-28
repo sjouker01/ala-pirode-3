@@ -8,7 +8,26 @@
 </head>
 <?php
 // header
-include("php-add-ons\header.php");
+include("php-add-ons\conect.php");
+$id = $_GET['id'];
+$sql = "SELECT *FROM smaken WHERE id = '$id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0  ){
+    $row = $result->fetch_object();
+    $id = $row->id;
+    $naam = $row->naam;
+    $beschrijving = $row->beschrijving;
+    $afbeeldingen = $row->afbeeldingen;
+    $ingredienten =$row->ingredienten;
+
+
+    echo $naam . "</br>";
+    echo $beschrijving . "</br>";
+    echo "<a href='producten_info.php?id=$id'><img class='image' src='images/$afbeeldingen' draggable='false'/></a>";
+    echo $ingredienten . "</br>";
+}
+
 
 
 ?>
@@ -17,6 +36,5 @@ include("php-add-ons\header.php");
 </body>
 <?php
 // footer
-include("php-add-ons\hooter.php");
 ?>
 </html>
