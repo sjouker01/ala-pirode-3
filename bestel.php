@@ -26,7 +26,7 @@
             <form action="Index.php"method="post">
                 <div class="card shadow">
                     <div>
-                        <img src="Shopping/upload/Wortel_can.png" alt="image1" class="img-fluid card-img-top">
+                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Wortelsmaak Energie</h5>
@@ -55,7 +55,7 @@
             <form action="Index.php"method="post">
                 <div class="card shadow">
                     <div>
-                        <img src="Shopping/upload/Wortel_can.png" alt="image1" class="img-fluid card-img-top">
+                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Wortelsmaak Energie</h5>
@@ -84,7 +84,7 @@
             <form action="Index.php"method="post">
                 <div class="card shadow">
                     <div>
-                        <img src="Shopping/upload/Wortel_can.png" alt="image1" class="img-fluid card-img-top">
+                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Wortelsmaak Energie</h5>
@@ -113,7 +113,7 @@
             <form action="Index.php"method="post">
                 <div class="card shadow">
                     <div>
-                        <img src="Shopping/upload/Wortel_can.png" alt="image1" class="img-fluid card-img-top">
+                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Wortelsmaak Energie</h5>
