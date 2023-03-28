@@ -54,6 +54,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+<<<<<<< Updated upstream
+=======
+}
+
+@media only screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+
+>>>>>>> Stashed changes
   }
   /* main  */
   main {
@@ -158,4 +167,250 @@ body {
     th {
       font-size: 12px;
     }
+<<<<<<< Updated upstream
   }
+=======
+  }
+
+
+/* contact formulier css */
+
+
+.container-contact {
+  display:inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  
+}
+
+.content-contact {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  margin-top:-10vh;
+ 
+}
+
+.form-container-contact {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* CSS van de input (Invul plekken) zones van het contact formulier */
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=email], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+} 
+
+/* Responsive CSS van de contact formulier en de tekst ernaast */
+
+
+@media only screen and (max-width: 650px){
+  .container-contact{
+    display:block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tekst */
+
+  .content-contact {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    margin-top:5vh;
+  }
+  
+  .form-container-contact {
+    flex: 1;
+    padding: 20px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type=text], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  } 
+}
+
+  /* begin producten pagina */
+  #producten_body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    margin: 0rem;
+  }
+  #image-track >.image{
+    width: 40vmin;
+    height: 56vmin; 
+    object-fit: cover;
+    object-position: center;
+  }
+  #image-track{
+    display: flex;
+    gap: 4vmin;
+    /* position: absolute; left: 50%; top: 50%; transform: translate(0%, -50%); */
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  #image-track::-webkit-scrollbar{
+    display: none;
+  }
+  /*einde producten pagina*/
+
+/*begin voor form pagina*/
+
+#contact{
+  color: #4CAF50;
+}
+
+#Form_background{
+
+  background: no-repeat;
+  background-size: 700px;
+  background-image: url("https://www.shutterstock.com/image-illustration/e-mail-contact-us-sign-260nw-131465522.jpg");
+
+
+
+}
+#laame{
+  color: #4CAF50;
+}
+
+#mail{
+  color: #fa0422;
+}
+
+#sub{
+  color: #4CAF50;
+}
+
+#beriecht{
+  color: #fa0422;
+}
+
+#form{
+  border-color: #3be30d;
+  border-width: thick;
+}
+
+
+
+
+
+
+
+
+/*einde voor form pagina*/
+
+/*begin voor over ons pagina*/
+
+#Naam{
+  color: #111111;
+  width: 199px;
+  background-color: #3be30d;
+}
+#paragraaf{
+  background-color: #3be30d;
+  width: 199px;
+  color: #2c2f2c;
+  align-content: center;
+}
+#overons_body{
+
+
+
+}
+
+#overons_sec{
+  display: grid;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+/*einde voor over ons pagina*/
+>>>>>>> Stashed changes
