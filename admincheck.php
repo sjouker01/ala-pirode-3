@@ -34,18 +34,7 @@ try {
 }
 
 
-// if (isset($_POST['ver'])) {
-//   $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam1']);
-//   $wachtwoord1 = mysqli_real_escape_string($conn, $_POST['wachtwoord1']);
 
-//   mysqli_query($conn, "DELETE FROM gebruikers WHERE username = '$gebruikersnaam1' AND password = '$wachtwoord1'");
-
-//   if (mysqli_affected_rows($conn) > 0) {
-//     echo "succses  " . mysqli_affected_rows($conn);
-//   } else {
-//     echo "Fout bij het verwijderen van de gebruiker: " . mysqli_error($conn);
-//   }
-// }
 
 if (isset($_POST['ver'])) {
   $gebruikersnaam1 = $_POST['gebruikersnaam1'];
