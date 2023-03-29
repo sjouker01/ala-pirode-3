@@ -13,23 +13,7 @@
      
       require_once('php-add-ons\conect.php');
 
-// Gebruiker toevoegen
-// try{
-// if (isset($_POST['add'])) {
-//   $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam']);
-//   $wachtwoord1 = $_POST['wachtwoord'];
-//   $toestemming1 = $_POST['toestemming'];
 
-//   mysqli_query($conn, " INSERT INTO gebruikers (username, password, permission) VALUES ('$gebruikersnaam1', '$wachtwoord1', '$toestemming1')");
-// }
-// if ($conn->connect_error) {
-//   die("Connectie mislukt: " . $conn->connect_error);
-// } 
-// } catch(mysqli_sql_exception $e) {
-//   if ($e->getCode() == 1062) {
-  
-// }
-// }
 try {
   if (isset($_POST['add'])) {
     $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam']);
@@ -50,18 +34,7 @@ try {
 }
 
 
-// if (isset($_POST['ver'])) {
-//   $gebruikersnaam1 = mysqli_real_escape_string($conn, $_POST['gebruikersnaam1']);
-//   $wachtwoord1 = mysqli_real_escape_string($conn, $_POST['wachtwoord1']);
 
-//   mysqli_query($conn, "DELETE FROM gebruikers WHERE username = '$gebruikersnaam1' AND password = '$wachtwoord1'");
-
-//   if (mysqli_affected_rows($conn) > 0) {
-//     echo "succses  " . mysqli_affected_rows($conn);
-//   } else {
-//     echo "Fout bij het verwijderen van de gebruiker: " . mysqli_error($conn);
-//   }
-// }
 
 if (isset($_POST['ver'])) {
   $gebruikersnaam1 = $_POST['gebruikersnaam1'];
