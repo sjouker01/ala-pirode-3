@@ -1,7 +1,7 @@
 
 <body>
 <header>
-  <div class="logo">Logo</div>
+  <div class="logo"><img src="/images/logo.png" alt="dit is logo"></div>
   <nav>
     <ul>
       <li><a href="index.php">home</a></li>
