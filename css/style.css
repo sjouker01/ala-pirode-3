@@ -20,9 +20,10 @@ header {
   padding: 20px;
 }
 
-.logo {
-  font-size: 2em;
-  font-weight: bold;
+.logo , header ,  img{
+  display: flex;
+  height: 2vw;
+  max-width: 2vw;
 }
 
 nav ul {
