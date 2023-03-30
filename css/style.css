@@ -20,9 +20,10 @@ header {
   padding: 20px;
 }
 
-.logo {
-  font-size: 2em;
-  font-weight: bold;
+ header  img .logo{
+height: 4vh;
+width: auto;
+
 }
 
 nav ul {
@@ -92,8 +93,9 @@ body {
     margin: 10px 0;
   }
 
-  .logo {
+  .logo img {
     font-size: 1.5em;
+    max-width: 10%;
   }
 
   .menu-toggle {

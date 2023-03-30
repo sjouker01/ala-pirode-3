@@ -57,14 +57,7 @@ if (isset($_POST['ver'])) {
   }
 }
 
-
-
   // hash the password before comparing it with the database
-
-
-
-
-
 
 // Gebruikers weergeven
 
@@ -104,9 +97,6 @@ if (isset($_POST['ver'])) {
   <button class="btn-toevoegen1" type="submit" name="ver">verwijderd</button>
 </article>
 
-
-
-
 </form>
 
 
@@ -126,8 +116,6 @@ if(!isset($_SESSION)) {
     }
 }
 }
- 
-    
     ?>
     
    
