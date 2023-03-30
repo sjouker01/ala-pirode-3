@@ -1,7 +1,4 @@
-<?php
-
-//require_once ('./php/component.php')
-?>
+<?php require_once ('./component.php')?>
 
 <!doctype html>
 <html lang="en">
@@ -16,128 +13,20 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
     <div class="row text-center py-5">
-        <div class="col-md-3 col-sm-6 my-3 my-md-0">
-            <form action="Index.php"method="post">
-                <div class="card shadow">
-                    <div>
-                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Wortelsmaak Energie</h5>
-                        <h6>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </h6>
-                        <p class="card-text">
-                            Best drink there is!
-                        </p>
-                        <h5>
-                            <small><s class="text-secondary">€150</s></small>
-                            <span class="price">€100</span>
-                        </h5>
+        <?php
 
-                        <button type="submit"class="btn btn-warning my-3" name="add">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+        component("Wortelsmaak Energie","€100","./images/Wortel.png");
+        component("Avocadosmaak Energie","€100","./images/Advocado.png");
+        component("Sinassmaak Energie","€100","./images/sinas.png");
+        component("Melksmaak Energie","€100","./images/melk.png");
 
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-3 col-sm-6 my-3 my-md-0">
-            <form action="Index.php"method="post">
-                <div class="card shadow">
-                    <div>
-                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Wortelsmaak Energie</h5>
-                        <h6>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </h6>
-                        <p class="card-text">
-                            Best drink there is!
-                        </p>
-                        <h5>
-                            <small><s class="text-secondary">€150</s></small>
-                            <span class="price">€100</span>
-                        </h5>
-
-                        <button type="submit"class="btn btn-warning my-3" name="add">Add to Cart<i class="fas fa-shopping-cart"></i></button>
-
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-3 col-sm-6 my-3 my-md-0">
-            <form action="Index.php"method="post">
-                <div class="card shadow">
-                    <div>
-                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Wortelsmaak Energie</h5>
-                        <h6>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </h6>
-                        <p class="card-text">
-                            Best drink there is!
-                        </p>
-                        <h5>
-                            <small><s class="text-secondary">€150</s></small>
-                            <span class="price">€100</span>
-                        </h5>
-
-                        <button type="submit"class="btn btn-warning my-3" name="add">Add to Cart<i class="fas fa-shopping-cart"></i></button>
-
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-3 col-sm-6 my-3 my-md-0">
-            <form action="Index.php"method="post">
-                <div class="card shadow">
-                    <div>
-                        <img src="images/Wortel.png" alt="image1" class="img-fluid card-img-top">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Wortelsmaak Energie</h5>
-                        <h6>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </h6>
-                        <p class="card-text">
-                            Best drink there is!
-                        </p>
-                        <h5>
-                            <small><s class="text-secondary">€150</s></small>
-                            <span class="price">€100</span>
-                        </h5>
-
-                        <button type="submit"class="btn btn-warning my-3" name="add">Add to Cart<i class="fas fa-shopping-cart"></i></button>
-
-                    </div>
-                </div>
-            </form>
-        </div>
+        ?>
     </div>
 </div>
 
