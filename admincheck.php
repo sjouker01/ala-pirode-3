@@ -57,12 +57,7 @@ if (isset($_POST['ver'])) {
   }
 }
 
-  // hash the password before comparing it with the database
 
-// Gebruikers weergeven
-
-
-// Formulier weergeven
 ?>
 <form method="POST" action="">
   <div class="form-group">
