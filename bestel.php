@@ -4,8 +4,7 @@ require_once ('./component.php');
 
 
 //create instance of Createdb class
-$database = new CreateDb("Productdb", "Productb");
-
+$database = new CreateDb("productdb", "producttb");
 ?>
 
 <!doctype html>
@@ -28,12 +27,10 @@ $database = new CreateDb("Productdb", "Productb");
 <div class="container">
     <div class="row text-center py-5">
         <?php
-
-        component("Wortelsmaak Energie","€100","./images/Wortel.png");
-        component("Avocadosmaak Energie","€100","./images/Advocado.png");
-        component("Sinassmaak Energie","€100","./images/sinas.png");
-        component("Melksmaak Energie","€100","./images/melk.png");
-
+            $result = $database->getData();
+            while ($row = $result->fetch_assoc()){
+                component($row['product_name'], $row['product_price'], $row['product_image']);
+            }
         ?>
     </div>
 </div>
