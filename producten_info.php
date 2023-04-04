@@ -9,11 +9,11 @@
 <?php
 // header
 include("php-add-ons\header.php");
-
-
 ?>
 <body>
-    
+    <main>
+        
+    </main>
 </body>
 <?php
 // footer

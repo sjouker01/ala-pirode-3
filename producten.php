@@ -10,7 +10,6 @@
 <?php
 // header
 require_once("php-add-ons\header.php");
-
 ?>
 <body>
     <!--afbeeldingen van slideshow-->
@@ -25,7 +24,7 @@ require_once("php-add-ons\header.php");
 </article>
 </div>
 
-<!-- <script src="js/producten.js"></script> -->
+
 </body>
 <?php
 // footer

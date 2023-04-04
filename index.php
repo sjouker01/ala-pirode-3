@@ -22,9 +22,6 @@
 </div>
 
  </main>
- <?php 
-
- ?>
 <?php
 require_once("php-add-ons\aandbedining.php");
 
@@ -32,7 +29,7 @@ require_once("php-add-ons\aandbedining.php");
 
 ?>
   <?php
-    // conection 
+   
   
     require_once("php-add-ons\hooter.php");
     ?>

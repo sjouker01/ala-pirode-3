@@ -14,6 +14,7 @@ require_once ("php-add-ons\header.php");
 
 
 <body>
+	<main>
 	
 <div class="container-contact">
 		<div class="content-contact">
@@ -35,6 +36,7 @@ require_once ("php-add-ons\header.php");
 			
 		</div>
 	</div>
+	</main>
 </body>
 <footer>
     <?php
