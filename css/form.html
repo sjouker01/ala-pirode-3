@@ -3,29 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>FORM</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
 </head>
-<body id="Form_background">
+<body>
 
-<h1 id="contact">Contact</h1>
+<h1>Contact</h1>
 
-<form id="form" method="post" action="send-email.php">
-    <label id="laame" for="name">Name</label>
-    <input type="text" name="name" id="name" required>
+<form action="Procees-form.php" method="post">
+    <label for="naam">Naam</label>
+    <input type="text" id="naam" name="naam">
 
-    <label id="mail" for="email">email</label>
-    <input type="email" name="email" id="email" required>
+    <label for="bericht">Bericht</label>
+    <textarea id="bericht" name="bericht"></textarea>
 
-    <label id="sub" for="subject">Subject</label>
-    <input type="text" name="subject" id="subject" required>
+    <label for="priority">Priority</label>
+    <select id="priority" name="priority">
+        <option value="1">Laag</option>
+        <option value="2">Medium</option>
+        <option value="3">Hoog</option>
+    </select>
 
-    <label id="beriecht" for="message">Message</label>
-    <textarea name="message" id="message" required></textarea>
+    <fieldset>
+        <legend>Type</legend>
+        <label>
+            <input type="radio" name="type" value="1" checked>
+            Complaint
+        </label>
+
+        <br>
+
+        <label>
+            <input type="radio" name="type" value="2">
+            Suggestie
+        </label>
+    </fieldset>
+    <label>
+        <input type="checkbox" name="terms">
+        I agree to the terms and conditions
+    </label>
 
     <br>
 
-    <button>Send</button>
+    <button>Versturen</button>
 </form>
+
+
+
+
+
 
 </body>
 </html>

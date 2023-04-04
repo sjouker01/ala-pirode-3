@@ -167,9 +167,9 @@ body {
     th {
       font-size: 12px;
     }
-<<<<<<< Updated upstream
+
   }
-=======
+
   }
 
 
@@ -338,39 +338,12 @@ input[type=email], textarea {
 
 /*begin voor form pagina*/
 
-#contact{
-  color: #4CAF50;
-}
-
-#Form_background{
-
-  background: no-repeat;
-  background-size: 700px;
-  background-image: url("https://www.shutterstock.com/image-illustration/e-mail-contact-us-sign-260nw-131465522.jpg");
 
 
 
-}
-#laame{
-  color: #4CAF50;
-}
 
-#mail{
-  color: #fa0422;
-}
 
-#sub{
-  color: #4CAF50;
-}
 
-#beriecht{
-  color: #fa0422;
-}
-
-#form{
-  border-color: #3be30d;
-  border-width: thick;
-}
 
 
 
@@ -386,7 +359,7 @@ input[type=email], textarea {
 #Naam{
   color: #111111;
   width: 199px;
-  background-color: #3be30d;
+  background-color: #4CAF50;
 }
 #paragraaf{
   background-color: #3be30d;
@@ -413,4 +386,4 @@ input[type=email], textarea {
 
 
 /*einde voor over ons pagina*/
->>>>>>> Stashed changes
+
