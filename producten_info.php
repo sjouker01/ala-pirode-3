@@ -11,6 +11,14 @@
 <body class="producten-achtergrond">
 <?php
 // header
+
+include("php-add-ons\header.php");
+?>
+<body>
+    <main>
+        
+    </main>
+
 include("php-add-ons\conect.php");
 $id = $_GET['id'];
 $sql = "SELECT *FROM smaken WHERE id = '$id'";
@@ -64,6 +72,7 @@ if ($result->num_rows > 0  ){
 </div>
 </div>
 </div>
+
 </body>
 <?php
 // footer

@@ -60,24 +60,24 @@ if (isset($_POST['ver'])) {
 
 ?>
 <form method="POST" action="">
-  <div class="form-group">
+  <article class="form-group">
     <label for="gebruikersnaam">Gebruikersnaam:</label>
     <input id="gebruikersnaam" type="text" name="gebruikersnaam">
-  </div>
-  <div class="form-group">
+  </article>
+  <article class="form-group">
     <label for="wachtwoord">Wachtwoord:</label>
     <input id="wachtwoord" type="password" name="wachtwoord">
-  </div>
-  <div class="form-group">
+  </article>
+  <article class="form-group">
     <label for="toestemming">Toestemming:</label>
     <select id="toestemming" name="toestemming">
       <option value="1">Gebruiker</option>
       <option value="2">Beheerder</option>
     </select>
-  </div>
-  <div class="form-group">
+  </article>
+  <article class="form-group">
     <button class="btn-toevoegen" type="submit" name="add">Toevoegen</button>
-  </div>
+</article>
 </form>
 <form method="POST" action="" >
 <article class="form-group">

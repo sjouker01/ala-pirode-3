@@ -16,15 +16,12 @@
  ?>
 
  <main class="home-pagina">
- <div id="cookie-popup" >
+ <article id="cookie-popup" >
     <p>We use cookies to improve your browsing experience. By continuing to use this site, you consent to our use of cookies.</p>
     <button id="accept-cookies">I accept</button>
-</div>
+ </article>
 
  </main>
- <?php 
-
- ?>
 <?php
 require_once("php-add-ons\aandbedining.php");
 
@@ -32,7 +29,7 @@ require_once("php-add-ons\aandbedining.php");
 
 ?>
   <?php
-    // conection 
+   
   
     require_once("php-add-ons\hooter.php");
     ?>
