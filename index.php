@@ -12,7 +12,7 @@
 
 <body>
 
-<?php include("php-add-ons\header.php");
+<?php require_once("php-add-ons\header.php");
  ?>
 
  <main class="home-pagina">
@@ -23,7 +23,7 @@
 
  </main>
  <?php 
- require_once("php-add-ons\cookies.php");
+
  ?>
 <?php
 require_once("php-add-ons\aandbedining.php");
