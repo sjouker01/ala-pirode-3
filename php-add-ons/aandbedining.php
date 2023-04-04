@@ -15,13 +15,13 @@ if ($result1->num_rows > 0) {
         $einddatum = $row->einddatum;
         $omschrijving = $row->omschrijving;
         $afbeelding = $row->afbeelding;
-        
-        echo '<div class="aanbieding">';
-        echo '<div class="titel">' . $titel1 . '</div>';
-        echo '<div class="datum">Van ' . $begindatum1 . ' tot ' . $einddatum . '</div>';
-        echo '<div class="omschrijving">' . $omschrijving . '</div>';
+       
+        echo '<article class="aanbieding">';
+        echo '<article class="titel">' . $titel1 . '</article>';
+        echo '<article class="datum">Van ' . $begindatum1 . ' tot ' . $einddatum . '</div>';
+        echo '<article class="omschrijving">' . $omschrijving . '</article>';
         echo '<img class="afbeelding" src="' . $afbeelding . '">';
-        echo '</div>';
+        echo '</article>';
     }
 } else {
     echo "0 results";

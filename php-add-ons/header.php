@@ -3,7 +3,7 @@
 
 <body>
 <header>
-  <div class="logo"><img src="./images/logo.png" alt="dit is logo"></div>
+  <section class="logo"><img src="./images/logo.png" alt="dit is logo"></section>
   <nav>
     <ul>
       <li><a href="index.php">home</a></li>

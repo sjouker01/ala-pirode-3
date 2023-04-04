@@ -13,7 +13,7 @@ require_once("php-add-ons\header.php");
 ?>
 <body>
     <!--afbeeldingen van slideshow-->
-<div id='producten_body'>
+<article id='producten_body'>
     <article id="image-track" data-mouse-down-at="0">
         <img class="image" src="images/image.melk.png" draggable="false"/>
         <img class="image" src="images/advocado.png" draggable="false"/>
@@ -22,7 +22,7 @@ require_once("php-add-ons\header.php");
         
         
 </article>
-</div>
+</article>
 
 
 </body>
