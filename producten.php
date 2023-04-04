@@ -16,10 +16,10 @@ require_once("php-add-ons\header.php");
     <!--afbeeldingen van slideshow-->
 <div id='producten_body'>
 echo "<article id='image-track' data-mouse-down-at='0'>";
-echo "<a href='producten_info.php?id=2'><img class='image' src='images/image.melk.png' draggable='false'/></a>";
-echo "<a href='producten_info.php?id=4'><img class='image' src='images/advocado.png' draggable='false'/></a>";
+echo "<a href='producten_info.php?id=1'><img class='image' src='images/image.melk.png' draggable='false'/></a>";
+echo "<a href='producten_info.php?id=2'><img class='image' src='images/advocado.png' draggable='false'/></a>";
 echo "<a href='producten_info.php?id=3'><img class='image' src='images/sinas.png' draggable='false'/></a>";
-echo "<a href='producten_info.php?id=2'><img class='image' src='images/wortel.png' draggable='false'/></a>";
+echo "<a href='producten_info.php?id=4'><img class='image' src='images/wortel.png' draggable='false'/></a>";
 echo "</article>";
         
 </article>
