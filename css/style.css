@@ -92,10 +92,7 @@ nav ul li.dropdown ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-<<<<<<< Updated upstream
-=======
 /* einde header */
->>>>>>> Stashed changes
 
 /* Media query voor schermen smaller dan 768 pixels */
 @media screen and (max-width: 768px) {
