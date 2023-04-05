@@ -1,76 +1,89 @@
 
+/*font van website */
+*{
+  font-family: 'Roboto', sans-serif;
+}
 /* begin header */
 
-/* Stijlen voor schermen breder dan 768 pixels */
+/* stijl voor de header */
 header {
   background-color: #26508F;
-  padding: 20px;
-}
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.logo {
-  font-size: 32px;
+  background-color: #304ffe ;
   color: #fff;
+
+  padding: 15px;
 }
 
+ header  img .logo{
+height: 4vh;
+width: auto;
+
+}
+.logo img {
+padding: 0;
+  height: 15vh;
+}
 nav ul {
   display: flex;
-  justify-content: flex-end;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li:last-child {
-  margin-left: 0;
-}
-
-nav ul li a {
-  color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
   text-decoration: none;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+nav ul li {
+  margin: 0 10px;
+  position: relative;
 }
 
-nav ul li.dropdown ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+nav ul li a, nav ul a {
+  color: #FFF;
+  text-decoration: none;
 }
 
-nav ul li.dropdown:hover ul {
+nav ul li:hover > ul {
   display: block;
 }
 
-nav ul li.dropdown ul li {
-  margin: 5px 0;
+nav ul li ul {
+  background-color: #FFF;
+  display: none;
+  position: absolute;
+
+  z-index: 1;
+  background-color: #304ffe;
+
+  top: 100%;
+  left: 0;
+  width: 200px;
+
 }
 
-nav ul li.dropdown ul li:last-child {
-  margin-bottom: 0;
+nav ul li ul li {
+  margin: 0;
 }
 
-nav ul li.dropdown ul li a {
+nav ul li ul li a {
   color: #333;
 }
 
-nav ul li.dropdown ul li a:hover {
-  color: #26508F;
-}
-
 #dropdown-inloggen {
+  color: #26508F;
   font-weight: bold;
 }
 
-#mijnForm {
-  margin-top: 10px;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 #overlay {
@@ -104,61 +117,93 @@ nav ul li.dropdown ul li a:hover {
     font-size: 24px;
   }
 
+@media only screen and (max-width: 600px) {
   nav ul {
     display: none;
+
   }
 
   nav ul li {
-    display: block;
     margin: 10px 0;
   }
 
-  nav ul li:last-child {
+ 
+
+  .menu-toggle {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+  }
+
+  .menu-toggle:hover {
+    background-color: #FFF;
+  }
+
+  .menu-toggle span {
+    background-color: #FFF;
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 20px;
+  }
+
+  .menu-toggle span:nth-child(2) {
     margin-bottom: 0;
   }
 
-  nav ul li a {
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .menu-toggle.active + nav ul {
     display: block;
-    padding: 10px;
-    background-color: #26508F;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  nav ul li a:hover {
-    background-color: #fff;
-    color: #26508F;
-  }
-
-  nav ul li.dropdown ul {
-    position: static;
-    display: none;
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
-  }
-
-  nav ul li.dropdown:hover ul {
-    display: block;
-  }
-
-  nav ul li.dropdown ul li {
-    margin: 0;
-  }
-
-  nav ul li.dropdown ul li:last-child {
-    margin-bottom: 5px;
-  }
-
-  nav ul li.dropdown ul li a {
-    color: #fff;
   }
 }
+
+
 /* einden header */
 
-
   /* main  */
+  #cookie-popup {
+    display: none;
+    position: fixed;
+    bottom: calc(100vh - 50%);
+    left: calc(100vw - 50% - 100px);
+    right: 0;
+    z-index: 10;
+    padding: 20px;
+    width: 200px;
+    /* background-color: #f1f1f1; */
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ 
+#cookie-popup p {
+    margin: 0;
+}
+
+#cookie-popup button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cookie-popup button:hover {
+    background-color: #3e8e41;
+}
+
   /* form inlog */
 
 
@@ -189,7 +234,7 @@ nav ul li.dropdown ul li a:hover {
 
 /* Geef de submitknop een donkerblauwe achtergrond, witte tekst en afgeronde hoeken */
 #login-button {
-  background-color: #26508F;
+  background-color: #090a0a;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -213,48 +258,158 @@ nav ul li.dropdown ul li a:hover {
   /* einde main */
   /* begin footer */
   footer {
-    background-color: #26508F;
+
+    background-color: #304ffe;
     padding: 20px;
     font-size: 14px;
     color: #fff;
     margin-top: auto;
+
+    position:relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #26508F;
+    color: #FFFFFF;
+
   }
   
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+    color: #FFFFFF;
   }
   
   .footer-row {
     display: flex;
     justify-content: space-between;
+    color: #FFFFFF;
   }
   
   .footer-col {
-    flex-basis: 50%;
-    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #FFFFFF;
   }
   
   .footer-col-1 {
-    text-align: left;
+    max-width: 300px;
   }
   
   .footer-links {
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: flex-end;
+    color: #FFFFFF;
   }
   
   .footer-links li {
-    margin: 0 10px;
+    margin-left: 20px;
+    color: #FFFFFF;
   }
   
-  a {
-    color: #fff;
+  .footer-links li:first-child {
+    margin-left: 0;
+  }
+  .footer-col-footer-col-2{
+    color: #FFFFFF;
     text-decoration: none;
   }
+
+  .footer-links a{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+ 
+  form {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Stijlen voor formuliergroepen */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Stijlen voor labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Stijlen voor invoervelden */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+  
+  /* Stijlen voor toevoegenknop */
+  .btn-toevoegen {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Stijlen voor toevoegenknop bij hover */
+  .btn-toevoegen:hover {
+    background-color: #3e8e41;
+  }
+  article {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
   
   a:hover {
     color: #222;
@@ -320,3 +475,264 @@ body{
 
 
   /* eind product pagina*/
+/* contact formulier css */
+
+
+.container-contact {
+  display:inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  
+}
+
+.content-contact {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  margin-top:-10vh;
+ 
+}
+
+.form-container-contact {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* CSS van de input (Invul plekken) zones van het contact formulier */
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=email], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+} 
+
+/* Responsive CSS van de contact formulier en de tekst ernaast */
+
+
+@media only screen and (max-width: 650px){
+  .container-contact{
+    display:block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tekst */
+
+  .content-contact {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    margin-top:5vh;
+  }
+  
+  .form-container-contact {
+    flex: 1;
+    padding: 20px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type=text], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  } 
+}
+
+  /* begin producten pagina */
+  #producten_body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    margin: 0rem;
+  }
+  #image-track .image{
+    width: 40vmin;
+    height: 56vmin; 
+    object-fit: cover;
+    object-position: center;
+  }
+  #image-track{
+    display: flex;
+    gap: 4vmin;
+    /* position: absolute; left: 50%; top: 50%; transform: translate(0%, -50%); */
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  #image-track::-webkit-scrollbar{
+    display: none;
+  }
+  /*einde producten pagina*/
+
+
+
+
+  .aanbieding {
+    
+    margin-top: 10vh;
+    margin-left: 10vw ;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 30vw;
+    margin-bottom: 4vh;
+    
+    
+  }
+  .titel {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .datum {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  .omschrijving {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .afbeelding {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+
+  /** CSS code van producten_info / producten die opgehaald worden uit de SQL **/ 
+  .informatie-energy-producten{
+
+ 
+   height:27.5vh;
+   margin-left:10vw;
+  }
+  .product-info-image {
+    width: 25vw;
+    height:30vh;
+   margin-top:10vh;
+   margin-left:-13vw;
+   
+  }
+
+  .producten_informatie_sql{
+    
+    display:flex;
+    margin-top:5vh;
+    margin-left:7.5vw;
+    margin-right:7.5vw;
+    margin-bottom:5vh;
+  }
+
+  .informatie-energy-ingredienten{
+ margin-bottom:50px;
+ 
+ 
+  }
+  .box-producten-informatie-image-alles{
+    margin-top:10vh;
+    margin-left:10vw;
+    margin-right:10vw;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+background-color: rgba(192,192,192,0.3);
+
+  }
+  .producten-achtergrond{
+    background-color: #26508F;
+   
+  }
+
+  .ingredienten-producten{
+    font-size:0.9rem;
+   
+  }
+
+  .box-ingredienten{
+    width:200%;
+    
+  }
+  .smaak-titel{
+    font-size:2rem;
+    
+  }
+
+  .short-bericht-onder-titel{
+    margin-left:-4vw;
+    width:15vw;
+    height:50%;
+    
+  }

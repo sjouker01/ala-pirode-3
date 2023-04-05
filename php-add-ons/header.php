@@ -1,31 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <script src="/js/login.js"></script>
-</head>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+
 <body>
 <header>
-  <div class="logo">Logo</div>
+  <section class="logo"><img src="./images/logo.png" alt="dit is logo"></section>
   <nav>
     <ul>
-      <li><a href="#">Knop 1</a></li>
-      <li><a href="#">Knop 2</a></li>
-      <li><a href="#">Knop 3</a></li>
+      <li><a href="index.php">home</a></li>
+      <li><a href="contact-pagina.php">contact</a></li>
+      <li>
+
+<a href="producten.php">producten</a></li>
       <li class="dropdown">
         <a href="#">Dropdown</a>
+      
         <ul>
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
+          <li><a href="../index.php">home</a></li>
+          <li><a href="../producten.php">producten</a></li>
+          <li><a href="../contact-pagina.php">contact</a></li>
           <li><a href="php-add-ons\inloggen.php" id="dropdown-inloggen">Inloggen</a></li>
         </ul>
       </li>
+      <?php session_start(); 
+    if(isset($_SESSION["username"])){
+      ?><a  href="/ala-pirode-3/admincheck.php"> <?php echo $_SESSION["username"];?></a><?php
+    }
+    ?>
     </ul>
+
   </nav>
 </header>
 
