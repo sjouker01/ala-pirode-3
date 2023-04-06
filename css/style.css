@@ -434,31 +434,21 @@ button:hover {
 
 
 .container-contact {
-  display:inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  
+display: flex;
+justify-content: center;
+top: 15vh;
+text-align: center;
+width: 30vw;
+
 }
 
-.content-contact {
-  flex: 1;
-  padding: 20px;
-  text-align: justify;
-  margin-top:-10vh;
- 
-}
 
 .form-container-contact {
   flex: 1;
   padding: 20px;
 }
 
-form {
-  max-width: 500px;
-  margin: 0 auto;
-}
+
 
 label {
   display: block;

@@ -18,7 +18,7 @@ if ($result1->num_rows > 0) {
        
         echo '<article class="aanbieding">';
         echo '<article class="titel">' . $titel1 . '</article>';
-        echo '<article class="datum">Van ' . $begindatum1 . ' tot ' . $einddatum . '</div>';
+        echo '<article class="datum">Van ' . $begindatum1 . ' tot ' . $einddatum . '</article>';
         echo '<article class="omschrijving">' . $omschrijving . '</article>';
         echo '<img class="afbeelding" src="' . $afbeelding . '">';
         echo '</article>';
