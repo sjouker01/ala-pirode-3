@@ -38,8 +38,12 @@ echo "</article>";
 </body>
 <?php
 // footer
+<<<<<<< Updated upstream
 
 require_once('php-add-ons\hooter.php');
 
+=======
+include 'php-add-ons\hooter.php';
+>>>>>>> Stashed changes
 ?>
 </html> 

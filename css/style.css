@@ -85,6 +85,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+<<<<<<< Updated upstream
 
 #overlay {
   display: none;
@@ -117,6 +118,8 @@ body {
     font-size: 24px;
   }
 
+=======
+>>>>>>> Stashed changes
 @media only screen and (max-width: 600px) {
   nav ul {
     display: none;
