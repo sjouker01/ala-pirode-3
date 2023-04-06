@@ -12,16 +12,8 @@
  ?>
 <body>
 
-<?php include("php-add-ons/venement.php")
-?>
-<div id='evenementen-pagina-redirect'>
-<article id="Artiesten-redirect">;
-<a href='evenement-artiesten.php?achternaam=Presley'></a>;
- <a href='evenement-artiesten.php?id=2'></a>;
- <a href='evenement-artiesten.php?id=3'></a>;
- <a href='evenement-artiesten.php?id=4'></a>;
- <a href='evenement-artiesten.php?id=4'></a>;
-</article>";
+
+
         
 </article>
 </body>

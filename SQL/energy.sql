@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 04 apr 2023 om 13:14
+-- Gegenereerd op: 03 apr 2023 om 13:42
 -- Serverversie: 10.4.25-MariaDB
 -- PHP-versie: 8.1.10
 
@@ -86,18 +86,11 @@ INSERT INTO `artiesten` (`artiest_id`, `naam`, `achternaam`, `voornaam`, `tussen
 --
 
 CREATE TABLE `contact` (
-  `id` int(11) NOT NULL,
-  `Naam` varchar(65) NOT NULL,
-  `Email` varchar(65) NOT NULL,
+  `contact_id` int(11) NOT NULL,
+  `Naam` varchar(1005) NOT NULL,
+  `Email` varchar(1005) NOT NULL,
   `Bericht` varchar(1005) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Gegevens worden geëxporteerd voor tabel `contact`
---
-
-INSERT INTO `contact` (`id`, `Naam`, `Email`, `Bericht`) VALUES
-(2, 'test', 'test@test', 'test');
 
 -- --------------------------------------------------------
 
@@ -211,6 +204,30 @@ INSERT INTO `reacties` (`reactie_id`, `evenement_id`, `titel`, `inhoud`, `auteur
 (2, 503, 'Waste of time', 'Wat een complete verspilling van tijd.', 'Zeurkous'),
 (3, 505, 'Pharell was top', 'Jammer dat Lady Gaga niet is gekomen.', 'Fanboy17');
 
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `smaken`
+--
+
+CREATE TABLE `smaken` (
+  `id` int(11) NOT NULL,
+  `naam` varchar(100) NOT NULL,
+  `beschrijving` text NOT NULL,
+  `afbeeldingen` varchar(255) NOT NULL,
+  `ingredienten` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `smaken`
+--
+
+INSERT INTO `smaken` (`id`, `naam`, `beschrijving`, `afbeeldingen`, `ingredienten`) VALUES
+(1, 'Wortel', 'Een lekker fris drankje, met  de verfrissende smaak van wortel.<br> Met lekker veel cafeine voor die extra boost. <br>De oranje coke in vocht vorm.', '../images/Wortel.png ', 'Voedingswaarden<br>\r\n<br>\r\nDeze waarden gelden voor het onbereide product.<br>\r\n\r\nSoort    Per 1000 Milliliter    RI*<br>\r\nEnergie    195 kJ (46 kcal)<br>\r\nWortel   22g<br>\r\nVet    0 g<br>\r\nwaarvan verzadigd    0 g<br>\r\nKoolhydraten    11 g<br>\r\nwaarvan suikers    11 g<br>\r\nEiwitten    0 g<br>\r\nZout    0.1 g<br>\r\nVitamine B3 / Niacine    6.4 mg    40%<br>\r\nVitamine B5 / Pantotheenzuur    2 mg    33%<br>\r\nVitamine B2 / Riboflavine    0.21 mg    15%<br>\r\nVitamine B6 / Pyridoxine    0.2 mg    14%<br>\r\nVitamine B12 / Cyano-Cobalamine    0.4 µg    16%<br>'),
+(2, 'melk', 'melk is lekker, maar wat is nog lekkerder? melk met cafeine en kilo\'s suiker en zoetstoffen. koop nu dit witte goedje \r\nmaar stop het niet in je neus!', '../images/melk.png', 'Voedingswaarden\r\n\r\nDeze waarden gelden voor het onbereide product.\r\n\r\nSoort    Per 1000 Milliliter    RI*\r\nEnergie    195 kJ (46 kcal)\r\nmelk 22L\r\nVet    0 g\r\nwaarvan verzadigd    0 g\r\nKoolhydraten    11 g\r\nwaarvan suikers    100 g\r\nEiwitten    1000 g\r\nZout    0.1 g\r\nVitamine B3 / Niacine    6.4 mg    40%\r\nVitamine B5 / Pantotheenzuur    2 mg    33%\r\nVitamine B2 / Riboflavine    0.21 mg    15%\r\nVitamine B6 / Pyridoxine    0.2 mg    14%\r\nVitamine B12 / Cyano-Cobalamine    0.4 µg    16%'),
+(3, 'sinas', 'lekker fris sinas met een boos het smaakt net naar echte sinas maar dan met zoetstoffen en cafeine gemaakt', '../images/sinas.png', 'Voedingswaarden\r\n\r\nDeze waarden gelden voor het onbereide product.\r\n\r\nSoort    Per 1000 Milliliter    RI*\r\nEnergie    195 kJ (46 kcal)\r\nsinas 200g\r\nVet    0 g\r\nwaarvan verzadigd    0 g\r\nKoolhydraten    11 g\r\nwaarvan suikers    11 g\r\nEiwitten    0 g\r\nZout    0.1 g\r\nVitamine B3 / Niacine    6.4 mg    40%\r\nVitamine B5 / Pantotheenzuur    2 mg    33%\r\nVitamine B2 / Riboflavine    0.21 mg    15%\r\nVitamine B6 / Pyridoxine    0.2 mg    14%\r\nVitamine B12 / Cyano-Cobalamine    0.4 µg    16%'),
+(4, 'Advocado', 'smaakt naar advocado zoals de naam al aangeeft erg lekker net zo groen als een advocado het komt er ook groen weer uit dus wees voorbereid', '../images/image.png', 'Voedingswaarden\r\n\r\nDeze waarden gelden voor het onbereide product.\r\n\r\nSoort    Per 1000 Milliliter    RI*\r\nEnergie    195 kJ (46 kcal)\r\nAdvocado   1000g\r\nVet    0 g\r\nwaarvan verzadigd    0 g\r\nKoolhydraten    11 g\r\nwaarvan suikers    11 g\r\nEiwitten    0 g\r\nZout    0.1 g\r\nVitamine B3 / Niacine    6.4 mg    40%\r\nVitamine B5 / Pantotheenzuur    2 mg    33%\r\nVitamine B2 / Riboflavine    0.21 mg    15%\r\nVitamine B6 / Pyridoxine    0.2 mg    14%\r\nVitamine B12 / Cyano-Cobalamine    0.4 µg    16%');
+
 --
 -- Indexen voor geëxporteerde tabellen
 --
@@ -232,7 +249,7 @@ ALTER TABLE `artiesten`
 -- Indexen voor tabel `contact`
 --
 ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`contact_id`);
 
 --
 -- Indexen voor tabel `evenementen`
@@ -263,6 +280,12 @@ ALTER TABLE `reacties`
   ADD KEY `evenement_id` (`evenement_id`);
 
 --
+-- Indexen voor tabel `smaken`
+--
+ALTER TABLE `smaken`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -282,7 +305,7 @@ ALTER TABLE `artiesten`
 -- AUTO_INCREMENT voor een tabel `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT voor een tabel `evenementen`
