@@ -18,7 +18,7 @@ include("php-add-ons\header.php");
     <main>
         
     </main>
-
+<?php
 include("php-add-ons\conect.php");
 $id = $_GET['id'];
 $sql = "SELECT *FROM smaken WHERE id = '$id'";

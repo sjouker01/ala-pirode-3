@@ -40,7 +40,7 @@ echo "</article>";
 // footer
 <<<<<<< Updated upstream
 
-require_once('php-add-ons\hooter.php');
+require_once('php-add-ons/hooter.php');
 
 =======
 include 'php-add-ons\hooter.php';
