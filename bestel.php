@@ -1,10 +1,48 @@
 <?php
+
+session_start();
+
+
 require_once ('CreateDb.php');
 require_once ('./component.php');
 
 
 //create instance of Createdb class
 $database = new CreateDb("productdb", "producttb");
+
+if (isset($_POST['add'])){
+    //print_r($_POST['product_id']);
+    if (isset($_SESSION['cart'])){
+
+        $item_array_id = array_column($_SESSION['cart'], "product_id");
+
+
+        if (in_array($_POST['product_id'], $item_array_id)){
+            echo "<script>alert('product is already added in cart..!')</script>";
+            echo "<script>window.location = 'bestel.php'</script>";
+        }else{
+
+            $count = count($_SESSION['cart']);
+            $item_array = array(
+                'product_id' => $_POST['product_id']
+            );
+
+            $_SESSION['cart'][$count] = $item_array;
+            print_r($_SESSION['cart']);
+        }
+
+    }else{
+
+        $item_array = array(
+                'product_id' => $_POST['product_id']
+        );
+
+        $_SESSION['cart'][0] = $item_array;
+        print_r($_SESSION['cart']);
+    }
+}
+
+
 ?>
 
 <!doctype html>
@@ -29,7 +67,7 @@ $database = new CreateDb("productdb", "producttb");
         <?php
             $result = $database->getData();
             while ($row = $result->fetch_assoc()){
-                component($row['product_name'], $row['product_price'], $row['product_image']);
+                component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
             }
         ?>
     </div>
