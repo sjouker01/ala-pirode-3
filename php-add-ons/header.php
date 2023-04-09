@@ -6,13 +6,8 @@
   <section class="logo"><img src="./images/logo.png" alt="dit is logo"></section>
   <nav>
     <ul>
-<<<<<<< Updated upstream
-      <li><a href="index.php">home</a></li>
-      <li><a href="contact-pagina.php">contact</a></li>
-=======
       <li><a href="../index.php">home</a></li>
       <li><a href="../contact-pagina.php">contact</a></li>
->>>>>>> Stashed changes
       <li>
 
 <a href="producten.php">producten</a></li>
