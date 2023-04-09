@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Product Info Pagina</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body class="producten-achtergrond">
@@ -21,7 +21,7 @@ include("php-add-ons\header.php");
 <?php
 include("php-add-ons\conect.php");
 $id = $_GET['id'];
-$sql = "SELECT *FROM smaken WHERE id = '$id'";
+$sql = "SELECT * FROM smaken WHERE id = '$id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0  ){

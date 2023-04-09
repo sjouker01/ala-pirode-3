@@ -7,6 +7,8 @@ include("php-add-ons\conect.php");
 $sql1 = "SELECT * FROM aanbiedingen";
 $result1 = $conn->query($sql1);
 
+
+
 if ($result1->num_rows > 0) {
     while($row = $result1->fetch_object()) {
    
@@ -23,6 +25,11 @@ if ($result1->num_rows > 0) {
         echo '<img class="afbeelding" src="' . $afbeelding . '">';
         echo '</article>';
     }
+    ?>
+
+
+    <?php
+
 } else {
     echo "0 results";
 }
