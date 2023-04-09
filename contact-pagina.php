@@ -17,14 +17,14 @@ require_once ("php-add-ons\header.php");
 <body>
 	<main>
 	
-<article class="container-contact">
-		<article class="content-contact">
+<div class="container-contact">
+		<div class="content-contact">
 			<h1>Contact opnemen</h1>
 			<p>Als u vragen heeft kan u doormiddel</p>
 			<p>van het contact formulier rechts contact opnemen.</p>
 
-		</article>
-		<article class="form-container-contact">
+</div>
+		<div class="form-container-contact">
 			<form action="contact-action.php" method="POST" autocomplete="off">
 				<label for="name">Naam:</label>
 				<input type="text" id="name" name="name" required>
@@ -35,8 +35,8 @@ require_once ("php-add-ons\header.php");
 				<input type="submit" value="Verstuur">
 			</form>
 			
-		</article>
-</article>
+</div>
+</div>
 	</main>
 </body>
 <footer>

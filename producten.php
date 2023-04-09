@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Pagina</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="javascript" type="javascript"  href="js/producten.js" >
 </head>
 <?php
 // header
@@ -13,26 +14,24 @@ require_once("php-add-ons\header.php");
 ?>
 <body>
     <!--afbeeldingen van slideshow-->
+<div class="producten-title">
+<h3>Onze producten</h3>
+</div>
+<div class="producten-tekst">
+<p>Klik op een afbeelding om meer informatie te krijgen over een van onze smaken!</p>
+</div>
 
-<article id='producten_body'>
-    <article id="image-track" data-mouse-down-at="0">
-        <img class="image" src="images/image.melk.png" draggable="false"/>
-        <img class="image" src="images/advocado.png" draggable="false"/>
-        <img class="image" src="images/sinas.png" draggable="false"/>
-        <img class="image" src="images/wortel.png" draggable="false"/>
-        
-
-<article id='producten_body'>
-echo "<article id='image-track' data-mouse-down-at='0'>";
-echo "<a href='producten_info.php?id=1'><img class='image' src='images/image.melk.png' draggable='false'/></a>";
-echo "<a href='producten_info.php?id=2'><img class='image' src='images/advocado.png' draggable='false'/></a>";
-echo "<a href='producten_info.php?id=3'><img class='image' src='images/sinas.png' draggable='false'/></a>";
-echo "<a href='producten_info.php?id=4'><img class='image' src='images/wortel.png' draggable='false'/></a>";
-echo "</article>";
+<div id='producten_body'>
+<div id='image-track' data-mouse-down-at='0'>
+<a href='producten_info.php?id=1'><img class='image-slider' src='images/image.melk.png' draggable='false'/></a>
+<a href='producten_info.php?id=2'><img class='image-slider' src='images/advocado.png' draggable='false'/></a>
+<a href='producten_info.php?id=3'><img class='image-slider' src='images/sinas.png' draggable='false'/></a>
+<a href='producten_info.php?id=4'><img class='image-slider' src='images/wortel.png' draggable='false'/></a>
+</div>";
 
         
-</article>
-</article>
+</div>
+</div>
 
 
 </body>

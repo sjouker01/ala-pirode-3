@@ -12,6 +12,7 @@
 
 <a href="informatie-pagina.php">Informatie</a></li>
 <a href="Artiesten.php">Artiesten  </a></li>
+      
       <li class="dropdown">
         <a href="#">Dropdown ﹀</a>
       

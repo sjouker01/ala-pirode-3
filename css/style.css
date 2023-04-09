@@ -2,6 +2,7 @@
 /*font van website */
 *{
   font-family: 'Roboto', sans-serif;
+  
 }
 /* begin header */
 
@@ -84,6 +85,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+  
 }
 
 
@@ -382,7 +384,6 @@ body {
     background-color: #3e8e41;
   }
   article {
-    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -474,10 +475,6 @@ button:hover {
 
 
   /* begin product pagina*/
-body{
-  height: 100%;
-  width: 100%;
-}
 
 
   /* eind product pagina*/
@@ -485,21 +482,33 @@ body{
 
 
 .container-contact {
-display: flex;
-justify-content: center;
-top: 15vh;
-text-align: center;
-width: 30vw;
+  display:inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 
+.content-contact {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+  margin-top:-10vh;
+  
 }
 
 
 .form-container-contact {
   flex: 1;
   padding: 20px;
+  margin-left:20vw;
+  width:30vw;
 }
 
-
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 label {
   display: block;
@@ -559,11 +568,13 @@ input[type=email], textarea {
     padding: 20px;
     text-align: justify;
     margin-top:5vh;
+    
   }
   
   .form-container-contact {
     flex: 1;
     padding: 20px;
+    margin-left:2%;
   }
   form {
     max-width: 500px;
@@ -615,22 +626,37 @@ input[type=email], textarea {
     width: 100%;
     background-color: black;
     margin: 0rem;
+
   }
   #image-track .image{
     width: 40vmin;
     height: 56vmin; 
     object-fit: cover;
     object-position: center;
+    
+  }
+  .image-slider{
+    border: 5px solid #ccc;
   }
   #image-track{
     display: flex;
     gap: 4vmin;
-    /* position: absolute; left: 50%; top: 50%; transform: translate(0%, -50%); */
     overflow: hidden;
     overflow-x: scroll;
   }
   #image-track::-webkit-scrollbar{
     display: none;
+  }
+  .producten-title{
+    display:flex;
+    justify-content: center;
+    font-size:2rem;
+  }
+
+  .producten-tekst{
+display:flex;
+justify-content: center;
+font-size:1rem;
   }
   /*einde producten pagina*/
 
@@ -674,7 +700,7 @@ input[type=email], textarea {
   .informatie-energy-producten{
 
  
-   height:27.5vh;
+   
    margin-left:10vw;
   }
   .product-info-image {
@@ -684,7 +710,45 @@ input[type=email], textarea {
    margin-left:-13vw;
    
   }
+ 
 
+  #producten_body{
+    height: 100vh;
+    width: 100%;
+    background-color:white;
+    margin: 0rem;
+    margin-top:20vh;
+  }
+  #image-track .image{
+    width: 20vw;
+    height: 20vh; 
+    object-fit: cover;
+    object-position: center;
+  }
+  #image-track{
+    display: flex;
+    gap: 4vmin;
+  justify-content: space-between;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  #image-track::-webkit-scrollbar{
+    display: none;
+  }
+  .image-slider {
+    max-width: 50vw;
+ max-height:50vh;
+  }
+  
+  .image-slider:last-child {
+    margin-right: 0;
+  }
+  @media only screen and (max-width: 768px) {
+    .image-slider {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
   .producten_informatie_sql{
     
     display:flex;
