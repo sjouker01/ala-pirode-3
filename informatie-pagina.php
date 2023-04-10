@@ -112,10 +112,11 @@ $result = mysqli_query($conn, $sql);
             <p>Datum: <?php echo $row['datum']; ?></p>
             <p>Locatie: <?php echo $row['plaatsnaam'] . ", " . $row['gebouw'] . ", " . $row['adres'] . " " . $row['postcode']; ?></p>
             
-        </div>
+      
+    </div>
     <?php endwhile; 
     ?>
-
+</div>
 <?php
 require_once('php-add-ons\hooter.php');
 ?>

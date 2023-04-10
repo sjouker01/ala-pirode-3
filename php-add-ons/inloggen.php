@@ -12,7 +12,9 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-    <?php include("header.php");?>
+    <?php include("header.php");
+    
+    ?>
     
 <article>
     <section>
@@ -42,7 +44,15 @@
 
 <?php
 
-require_once('php-add-ons\conect.php');
+$servername ="localhost";
+$username ="root";
+$password ="";
+$dbname ="energy";
+try{
+$conn = new mysqli(hostname: $servername, username: $username, password: $password, database: $dbname);
+}catch(Exception $e){
+    echo $e->getMessage();
+}
 
     
 if(isset($_POST['login'])) {

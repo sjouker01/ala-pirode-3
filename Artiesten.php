@@ -27,6 +27,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "<h2>Artiesten naam: " . $row['naam'] . "</h2>";
         echo "<a href='Artiesten-info.php?id="  . $row["artiest_id"] . "'>Klik hier om meer over " . $row["naam"] . " te zien</a>";
         echo "</div>";
+        echo "<hr size='4' width='98%' color='blue'> ";
+        
     }
 } else {
     echo "Geen artiesten gevonden.";
