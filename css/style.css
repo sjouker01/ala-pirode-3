@@ -8,13 +8,13 @@
 /* Stijlen voor schermen breder dan 768 pixels */
 /* stijl voor de header */
 header {
-  background-color: #26508F;
+  background-color: #838383;
   color: #FFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-color: #304ffe ;
+  background-color: #7e7e7e;
   color: #fff;
 
   padding: 20px;
@@ -54,7 +54,7 @@ nav ul li ul {
   position: absolute;
 
   z-index: 1;
-  background-color: #304ffe;
+  background-color: #777777;
 
   top: 100%;
   left: 0;
@@ -221,7 +221,7 @@ body {
   /* eind form inlog */
   footer {
 
-    background-color: #304ffe;
+    background-color: #777777;
     padding: 20px;
     font-size: 14px;
     color: #fff;
@@ -231,7 +231,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #26508F;
+    background-color: #808080;
     color: #FFFFFF;
 
   }
