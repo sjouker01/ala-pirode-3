@@ -22,9 +22,9 @@
       </article>
       <article class="footer-col footer-col-3">
         <ul class="social-media-links">
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="www.instagram.nl"><i class="fa fa-instagram"></i></a></li>
         </ul>
       </article>
     </article>

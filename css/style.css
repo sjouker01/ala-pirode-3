@@ -85,7 +85,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
- 
 }
 
 
@@ -626,6 +625,7 @@ input[type=email], textarea {
     width: 100%;
     background-color: black;
     margin: 0rem;
+   
 
   }
   #image-track .image{
@@ -637,12 +637,14 @@ input[type=email], textarea {
   }
   .image-slider{
     border: 5px solid #ccc;
+    
   }
   #image-track{
     display: flex;
     gap: 4vmin;
     overflow: hidden;
     overflow-x: scroll;
+   
   }
   
   #image-track::-webkit-scrollbar{

@@ -27,12 +27,12 @@ require_once("php-add-ons\header.php");
 <a href='producten_info.php?id=2'><img class='image-slider' src='images/advocado.png'  title="Advocado Smaak" draggable='false'/></a>
 <a href='producten_info.php?id=3'><img class='image-slider' src='images/sinas.png'  title="Sinas Smaak" draggable='false'/></a>
 <a href='producten_info.php?id=4'><img class='image-slider' src='images/wortel.png'  title="Wortel Smaak" draggable='false'/></a>
-</div>
-
-        
+</div> 
 </div>
 </div>
-
+<div class="mintycreamy">
+    
+</div>
 
 </body>
 <?php
