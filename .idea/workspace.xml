@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ec14966-2f32-4ba6-85d9-b59f6b8b1d5e" name="Changes" comment="" />
+    <list default="true" id="9ec14966-2f32-4ba6-85d9-b59f6b8b1d5e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/php-add-ons/Procees-form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php-add-ons/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/overons.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,10 +74,22 @@
       <option name="presentableId" value="Default" />
       <updated>1679403349181</updated>
       <workItem from="1679403350574" duration="33951000" />
+      <workItem from="1686647793287" duration="676000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
